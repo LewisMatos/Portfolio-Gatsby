@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const HeaderGradient = styled.div`
-    font-size: 2rem;
+  font-size: 2rem;
   padding: 0 0 1rem 0;
   background-image: -webkit-linear-gradient(
     left,

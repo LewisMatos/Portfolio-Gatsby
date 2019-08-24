@@ -11,12 +11,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 library.add(faGithub, faLinkedin, faTwitter, faFilePdf)
 
-const Picture = styled.div`
+const Section = styled.div`
   position: sticky;
   top: 0px;
   height: 100vh;
-  flex-basis: 30%; /* default value */
-  flex-grow: 0;
+  flex: 1 0 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,40 +50,39 @@ const Anchor = styled.a`
   }
 `
 
-let SideBar = props => {
-  const resumeBasics = props.resumeBasics
+let LeftSection = ({basics}) => {
   return (
-      <Picture>
+      <Section>
         <Content>
           <div>
             <h2>
               <strong>
-                <span>{`${resumeBasics.firstname} ${resumeBasics.middleinitial}`}</span>
+                <span>{`${basics.firstname} ${basics.middleinitial}`}</span>
               </strong>
             </h2>
             <h3>
               <strong className="lastname-animation">
-                {resumeBasics.lastname}
+                {basics.lastname}
               </strong>
             </h3>
           </div>
-          <h4>{resumeBasics.label}</h4>
+          <h4>{basics.label}</h4>
           <p />
           <div>
-            <h5>{`${resumeBasics.location.address}, ${resumeBasics.location.region}`}</h5>
+            <h5>{`${basics.location.address}, ${basics.location.region}`}</h5>
             <h5 className="text-address">
-              <Anchor href={`tel: ${resumeBasics.phone}`}>
-                {resumeBasics.phone}
+              <Anchor href={`tel: ${basics.phone}`}>
+                {basics.phone}
               </Anchor>
             </h5>
             <h5 className="text-address">
-              <Anchor href={`mailto: ${resumeBasics.email}`}>
-                {resumeBasics.email}
+              <Anchor href={`mailto: ${basics.email}`}>
+                {basics.email}
               </Anchor>
             </h5>
           </div>
           <ul className="list-inline">
-            {resumeBasics.profiles.map(profile => {
+            {basics.profiles.map(profile => {
               let fontAwesomeIcons = {
                 github: faGithub,
                 linkedin: faLinkedin,
@@ -108,8 +106,8 @@ let SideBar = props => {
             })}
           </ul>
         </Content>
-      </Picture>
+      </Section>
   )
 }
 
-export default SideBar
+export default LeftSection

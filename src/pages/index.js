@@ -2,24 +2,26 @@ import React, { Component } from "react"
 import Resume from "../../static/resume/Resume"
 import styled from "styled-components"
 import { GlobalStyle } from "../styles/GlobalStyle"
-import Profile from "./SideBar"
-import Education from './Education';
-
+import HeadSection from "./HeadSection"
+import LeftSection from "./LeftSection"
+import RightSection from "./RightSection"
 
 const Section = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
+  width: 100%;
 `
 export default class index extends Component {
   render() {
     return (
-        <>
-        <GlobalStyle/>
-      <Section>
-        <Profile resumeBasics={Resume.basics} />
-        <Education resumeEdu={Resume.education}></Education>
-      </Section>
+      <>
+        <HeadSection />
+        <GlobalStyle />
+        <Section>
+          <LeftSection basics={Resume.basics} />
+          <RightSection resume={Resume} />
+        </Section>
       </>
     )
   }
