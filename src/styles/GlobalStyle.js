@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import 'bootstrap/dist/css/bootstrap.css';
+import { createGlobalStyle } from "styled-components"
+import "bootstrap/dist/css/bootstrap.css"
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -28,15 +28,12 @@ export const GlobalStyle = createGlobalStyle`
     color:white;
   }
 
-  @media (min-width: 800px) {
-    :root {
-      font-size: .875em;
-    }
+  @media screen and (min-width: 80rem) {
+  :root{
+    font-size: calc(0.675rem + 0.25 * (100vw - 80rem) / 40); /* 1 */
   }
-
-  @media (min-width: 1200px) {
-    :root {
-      font-size: 1em;
-    }
+  @media screen and (min-width: 80rem) {
+  :root {
+    font-size: calc(0.675rem + 0.25 * (100vw - 80rem) / 40); /* 1 */
   }
-`;
+`

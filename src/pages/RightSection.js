@@ -8,6 +8,7 @@ import Projects from "./Projects.js"
 const Section = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   text-align: center;
   flex: 1 0 60%;
 `
@@ -17,6 +18,7 @@ const Column = styled.div`
   flex-direction: column;
   text-align: center;
   border-left: 2px solid black;
+  flex: 1 0 20%;
 }
 
 
@@ -24,6 +26,7 @@ const Column = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
 `
 

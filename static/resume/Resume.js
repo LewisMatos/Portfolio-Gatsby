@@ -42,6 +42,32 @@ let Resume = {
   },
   work: [
     {
+      company: "Freelance Software Engineer",
+      position: "Software Engineer",
+      website: "http://scripted.com",
+      startDate: "Mar 2017",
+      endDate: "Present",
+      summary: [
+
+        {
+          header: "Working on a range of freelance web projects using Amazon web services, Mailchimp and Wordpress.",
+          bullet: [],
+        },
+        {
+          header: "Discuss options with clients to make sure websites meet their needs as well as the needs of their customers.",
+          bullet: [],
+        },
+        {
+          header: "Managed websites and design/creation for clients around the country.",
+          bullet: [],
+        },
+        {
+          header: "Maintained and updated customer websites as needed.",
+          bullet: [],
+        },
+      ],
+    },
+    {
       company: "Scripted",
       position: "Teacher at Lyons Community School",
       website: "http://scripted.com",
@@ -151,6 +177,18 @@ let Resume = {
       ],
     },
   ],
+  FreeLance:[
+    {
+      organization: "Organization",
+      position: "Freelance Software Engineer",
+      website: "http://organization.com/",
+      startDate: "2012-01-01",
+      endDate: "2013-01-01",
+      summary: "Description...",
+      highlights: ["Awarded 'Volunteer of the Month'"],
+    },
+  ],
+
   volunteer: [
     {
       organization: "Organization",

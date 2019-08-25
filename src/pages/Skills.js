@@ -7,6 +7,7 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+
 `
 const Header = styled(HeaderGradient)``
 const StyledIcon = styled(DevIcon)`
@@ -64,16 +65,19 @@ const SkillImg = styled.img`
   width: ${props => props.width || "5rem"};
   position: relative;
   top: 9px;
-  background-color: black;
+  background-color: ${props => props.backgroundColor || "black"};
 `
 
 const Column = styled.div`
   display: flex;
   flex-direction: column;
+  text-align:left;
+  padding: 2rem;
   width: 100%;
   border-bottom: 2px solid black;
   &:last-child {
     border-bottom: none;
+    margin-bottom:2rem;
   }
 `
 const Skills = props => {
@@ -99,7 +103,7 @@ const Skills = props => {
     { name: "aws", color: "#F0DB4F" },
     { name: "github", color: "#83CD29" },
     { name: "redis", color: "#6181B6" },
-    { name: "styled-component", color: "#FFD845" },
+    { name: "styled-component", color: "#DA8876" },
     { name: "amazonwebservices", color: "#FFD845" },
   ]
   return (
@@ -123,7 +127,7 @@ const Skills = props => {
             if (tool.name === "styled-component") {
               return (
                 <ToolTipLi aria-label={tool.name}>
-                  <SkillImg src="../img/styled-component-logo.png" alt="" />
+                  <SkillImg backgroundColor={tool.color} src="../img/styled-components.png" alt="" />
                 </ToolTipLi>
               )
             } else if (tool.name === "amazonwebservices") {
@@ -132,6 +136,7 @@ const Skills = props => {
                   <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2018-04-10&ci=AWS00382630">
                     <SkillImg
                       width="24rem"
+                      backgroundColor={tool.color}
                       src="https://virtualbrakeman.files.wordpress.com/2017/01/amazon-web-services-certified-solutions-architect-associate.png?w=588"
                     />
                   </a>
