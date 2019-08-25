@@ -20,7 +20,7 @@ export default () => {
       <title>Lewis Matos | Software Engineer </title>
       <link
         rel="shortcut icon"
-        href="https://s3.amazonaws.com/lewismatos.com/images/_71A6572.png"
+        href="https://s3.amazonaws.com/lewismatos.com/images/_71A6572.jpg"
         hreflang="en-us"
       />
 

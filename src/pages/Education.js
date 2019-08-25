@@ -14,13 +14,13 @@ const School = styled.div`
 display:flex;
 justify-content:space-between;
 & > span{
-  margin-right:1rem;
+  margin-right:.5rem;
   line-height:2rem;
   font-weight:500;
 }
 `
 const Edu = styled.div`
-font-size:1.2rem;
+font-size:1rem;
 `
 
 const Header = styled(HeaderGradient)``

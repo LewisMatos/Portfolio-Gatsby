@@ -29,10 +29,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @media screen and (min-width: 80rem) {
-  :root{
-    font-size: calc(0.675rem + 0.25 * (100vw - 80rem) / 40); /* 1 */
-  }
-  @media screen and (min-width: 80rem) {
   :root {
     font-size: calc(0.675rem + 0.25 * (100vw - 80rem) / 40); /* 1 */
   }

@@ -7,7 +7,7 @@ const Section = styled.div`
   flex-direction: column;
   text-align: center;
   padding: 2rem;
-  flex: 1 0 30%;
+  flex: 1 0 60%;;
 `
 const Header = styled(HeaderGradient)`
   text-align: left;
@@ -32,7 +32,7 @@ let Experience = ({ work }) => {
       <Header>Experience</Header>
       {work.map(work => {
         return (
-          <div key={work.position}>
+          <div key={work.company} >
             <Company>
               <span>{work.company}</span>
               <span>{`${work.startDate} - ${work.endDate}`}</span>

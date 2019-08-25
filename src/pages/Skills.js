@@ -7,12 +7,11 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-
 `
 const Header = styled(HeaderGradient)``
 const StyledIcon = styled(DevIcon)`
   fill: ${props => props.color || "black "};
-  width: 5rem;
+  width: 6rem;
   margin-right: 0.5rem;
 `
 const ToolTipUl = styled.ul`
@@ -20,6 +19,8 @@ const ToolTipUl = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 40rem;
+  justify-content: space-evenly;
+  height: 30rem;
   list-style: none;
   margin: 0 auto;
   text-align: center;
@@ -36,7 +37,7 @@ const ToolTipLi = styled.li`
     content: attr(aria-label);
     position: absolute;
     top: -1.5em;
-    right:2em;
+    right: 2em;
     padding: auto;
     white-space: nowrap;
     border-radius: 5px;
@@ -71,13 +72,13 @@ const SkillImg = styled.img`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-  text-align:left;
+  text-align: left;
   padding: 2rem;
   width: 100%;
   border-bottom: 2px solid black;
   &:last-child {
     border-bottom: none;
-    margin-bottom:2rem;
+    margin-bottom: 2rem;
   }
 `
 const Skills = props => {
@@ -113,7 +114,7 @@ const Skills = props => {
         <ToolTipUl>
           {skills.map(skill => {
             return (
-              <ToolTipLi aria-label={skill.name}>
+              <ToolTipLi key={skill.name} aria-label={skill.name}>
                 <StyledIcon color={skill.color} icon={skill.name} />
               </ToolTipLi>
             )
@@ -126,13 +127,17 @@ const Skills = props => {
           {tools.map(tool => {
             if (tool.name === "styled-component") {
               return (
-                <ToolTipLi aria-label={tool.name}>
-                  <SkillImg backgroundColor={tool.color} src="../img/styled-components.png" alt="" />
+                <ToolTipLi key={tool.name} aria-label={tool.name}>
+                  <SkillImg
+                    backgroundColor={tool.color}
+                    src="../img/styled-components.png"
+                    alt=""
+                  />
                 </ToolTipLi>
               )
             } else if (tool.name === "amazonwebservices") {
               return (
-                <ToolTipLi aria-label={tool.name}>
+                <ToolTipLi key={tool.name} aria-label={tool.name}>
                   <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2018-04-10&ci=AWS00382630">
                     <SkillImg
                       width="24rem"
@@ -144,7 +149,7 @@ const Skills = props => {
               )
             }
             return (
-              <ToolTipLi aria-label={tool.name}>
+              <ToolTipLi key={tool.name} aria-label={tool.name}>
                 <StyledIcon color={tool.color} icon={tool.name} />
               </ToolTipLi>
             )

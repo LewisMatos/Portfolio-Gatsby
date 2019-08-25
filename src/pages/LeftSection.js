@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import {
   faGithub,
@@ -12,19 +13,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 library.add(faGithub, faLinkedin, faTwitter, faFilePdf)
 
 const Section = styled.div`
-  position: sticky;
-  top: 0px;
-  height: 100vh;
-  flex: 1 0 30%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  background-image: url(https://s3.amazonaws.com/lewismatos.com/images/_71A6572.jpg);
+  flex: 1 0 30%;
+`
+
+const ProfileImage = styled(Img)`
+  position: sticky;
+  height: 100vh;
+  width: 100%;
+  background-image: url("src/images/profileImage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  }
+  top: 0px;
+  right: 0;
+  left: 0;
+  bottom: 0;
   &:before {
     content: "";
     position: absolute;
@@ -33,16 +38,35 @@ const Section = styled.div`
     bottom: 0;
     left: 0;
     background: #185a9d;
-    background-image: radial-gradient(circle 100rem at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    background-image: radial-gradient(
+      circle 100rem at center,
+      #16d9e3 0%,
+      #30c7ec 47%,
+      #46aef7 100%
+    );
     opacity: 0.45;
   }
 
-
+  @media (max-width: 1200px) {
+    position: relative;
+  }
 `
+
 const Content = styled.div`
+  display:flex;
+    position: fixed;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
     color: white;
+    font-size: 2rem;
+    margin:auto;
+    width: 100%;
+    height: 100%;
+    @media (max-width: 1200px) {
     position: absolute;
-    max-width:inherit;
+  }
 }
 `
 
@@ -53,10 +77,15 @@ const Anchor = styled.a`
   }
 `
 const UL = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
   & > li:last-child {
-    & > a{
-      & > svg{
-      color:#F44F4F;
+    & > a {
+      & > svg {
+        color: #f44f4f;
       }
     }
     animation: flicker 4s linear infinite;
@@ -80,12 +109,15 @@ const UL = styled.ul`
       }
     }
   }
-  & > svg:last-child{
-    color:red;
+  & > svg:last-child {
+    color: red;
   }
 `
 
 const LabelLI = styled.li`
+  list-style: none;
+  align-self: center;
+  margin: 0 1rem;
   &[aria-label]:hover:after {
     opacity: 1;
     transition: all 0.1s ease 0.5s;
@@ -97,7 +129,7 @@ const LabelLI = styled.li`
     content: attr(aria-label);
     position: absolute;
     top: -1.5em;
-    right:2em;
+    right: 2em;
     padding: auto;
     white-space: nowrap;
     border-radius: 5px;
@@ -122,30 +154,34 @@ const LabelLI = styled.li`
   }
 `
 
-let LeftSection = ({ basics }) => {
+let LeftSection = props => {
+  console.log(props);
+  let {basics,headerImage} = props;
   return (
     <Section>
+      {/* <ProfileImage /> */}
+      <ProfileImage fluid={headerImage}/>
       <Content>
         <div>
-          <h2>
+          <h1>
             <strong>
               <span>{`${basics.firstname} ${basics.middleinitial}`}</span>
             </strong>
-          </h2>
-          <h3>
+          </h1>
+          <h1>
             <strong className="lastname-animation">{basics.lastname}</strong>
-          </h3>
+          </h1>
         </div>
-        <h4>{basics.label}</h4>
+        <h2>{basics.label}</h2>
         <p />
         <div>
-          <h5>{`${basics.location.address}, ${basics.location.region}`}</h5>
-          <h5 className="text-address">
+          <h3>{`${basics.location.address}, ${basics.location.region}`}</h3>
+          <h3>
             <Anchor href={`tel: ${basics.phone}`}>{basics.phone}</Anchor>
-          </h5>
-          <h5 className="text-address">
+          </h3>
+          <h3>
             <Anchor href={`mailto: ${basics.email}`}>{basics.email}</Anchor>
-          </h5>
+          </h3>
         </div>
         <UL>
           {basics.profiles.map(profile => {
@@ -156,11 +192,11 @@ let LeftSection = ({ basics }) => {
               resume: faFilePdf,
             }
             return (
-              <LabelLI key={profile.network} aria-label={profile.network} className="list-inline-item mr-4 hover">
-                <Anchor id="faIcon" href={profile.url}>
+              <LabelLI key={profile.network} aria-label={profile.network}>
+                <Anchor href={profile.url}>
                   <FontAwesomeIcon
                     icon={fontAwesomeIcons[profile.network]}
-                    size="5x"
+                    size="2x"
                   />
                 </Anchor>
               </LabelLI>
@@ -173,3 +209,4 @@ let LeftSection = ({ basics }) => {
 }
 
 export default LeftSection
+

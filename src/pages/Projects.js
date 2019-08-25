@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { HeaderGradient } from "../styles/HeaderGradient"
-import { Link } from "../../.cache/gatsby-browser-entry"
 
 const Section = styled.div`
   display: flex;
@@ -18,7 +17,7 @@ const Header = styled(HeaderGradient)`
 const Project = styled.div`
   margin: 0 .2rem 2rem 0;
   background: url(${props => props.url});
-  height: 30rem;
+  height: 47rem;
   background-size: cover;
   background-position: center center;
   box-shadow: 3px 3px 5px 6px #ccc;
@@ -28,19 +27,19 @@ let Projects = () => {
   return (
     <Section>
       <Header>Projects</Header>
-      <a href="https://911autodr.com/" target="_blank">
+      <a href="https://911autodr.com/" target="_blank" rel="noopener noreferrer">
         <Project url="../img/911AutoDrImage.PNG" />
       </a>
-      <a href="https://d26yj69bke7qnx.cloudfront.net/login" target="_blank">
+      <a href="https://d26yj69bke7qnx.cloudfront.net/login" target="_blank" rel="noopener noreferrer">
         <Project url="../img/VidUpImage.PNG"  />
       </a>
-      <a href="https://iartist.lewismatos.com/" target="_blank">
+      <a href="https://iartist.lewismatos.com/" target="_blank" rel="noopener noreferrer">
         <Project url="../img/iArtistImage.PNG"  />
       </a>
-      <a href="http://lewismatos.github.io/MiniMaxTicTacToe/" target="_blank">
+      <a href="http://lewismatos.github.io/MiniMaxTicTacToe/" target="_blank" rel="noopener noreferrer">
         <Project url="../img/MiniMaxImage.PNG"  />
       </a>
-      <a href="https://lewismatos.github.io/birdGame/" target="_blank">
+      <a href="https://lewismatos.github.io/birdGame/" target="_blank" rel="noopener noreferrer">
         <Project url="../img/birdGameImage.PNG"  />
       </a>
     </Section>
