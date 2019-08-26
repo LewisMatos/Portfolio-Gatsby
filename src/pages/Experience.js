@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+
 import { HeaderGradient } from "../styles/HeaderGradient"
 
 const Section = styled.div`
@@ -16,7 +17,7 @@ const Header = styled(HeaderGradient)`
 const Company = styled.div`
   display: flex;
   justify-content: space-between;
-  font-size: 1.4rem;
+  font-size: 1.4em;
   font-weight: 500;
 `
 const Position = styled.div`
@@ -60,7 +61,7 @@ function renderJson(data) {
   })
 }
 
-const Basics = props => {
+const Work = props => {
   return (
     <StaticQuery
       query={graphql`
@@ -89,7 +90,7 @@ let Experience = () => {
   return (
     <Section>
       <Header>Experience</Header>
-      <Basics />
+      <Work />
     </Section>
   )
 }

@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import ProfileImage from "../components/ProfileImage"
+import media from "styled-media-query"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import {
   faGithub,
@@ -37,19 +38,14 @@ const Content = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background: #185a9d;
-    background-image: radial-gradient(
-      circle 100rem at center,
-      #16d9e3 0%,
-      #30c7ec 47%,
-      #46aef7 100%
-    );
+    background: #rgba(117, 19, 93, 0.73);
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));
     opacity: 0.45;
   }
-  @media (max-width: 1200px) {
+  ${media.lessThan("medium")`
     position: absolute;
     width: 100%;
-  }
+  `}
 `
 
 const Details = styled.div`
@@ -193,7 +189,7 @@ const Basics = props => {
   return (
     <StaticQuery
       query={graphql`
-        query{
+        query {
           dataJson {
             basics {
               firstname
@@ -219,8 +215,7 @@ const Basics = props => {
   )
 }
 
-let LeftSection = props => {
-  let { basics } = props
+let LeftSection = () => {
   return (
     <Section>
       <ProfileImage />

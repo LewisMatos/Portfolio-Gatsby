@@ -30,7 +30,7 @@ const renderImage = value => {
   return <Project fluid={childImageSharp.fluid} />
 }
 
-const ImageTwo = props => {
+const ProjectImage = props => {
   const { file } = props
   return (
     <StaticQuery
@@ -62,4 +62,4 @@ const ImageTwo = props => {
   )
 }
 
-export default ImageTwo
+export default ProjectImage

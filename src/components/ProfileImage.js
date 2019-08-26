@@ -7,7 +7,6 @@ const Image = styled(BackgroundImage)`
   height: 100vh;
   width: 100%;
   top: 0px;
-  /* background-image: url("src/images/profileImage.jpg"); */
   &:before{
     content: "";
     position: absolute;
@@ -31,7 +30,6 @@ const Image = styled(BackgroundImage)`
 }
 `
 const GetImage = props => {
-  let file = "profileimage.jpg"
   return (
     <StaticQuery
       query={graphql`
