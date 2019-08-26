@@ -6,7 +6,7 @@ import {
   ToolTips,
   SkillImg,
 } from "../styles/LanguagesTools"
-import styledcomponents from '../images/styledcomponents.png';
+import styledcomponents from '../images/styledcomponent.png';
 
 export default function Languages() {
   let skills = [
