@@ -28,7 +28,7 @@ const Row = styled.div`
   overflow-y: hidden;
   transition-property: all;
   transition-duration: 0.9s;
-  transition-timing-function: cubic-bezier(0, .2, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 0.2, 0.5, 1);
   max-height: ${props => (props.hide ? 0 : "100%")};
 `
 const sliderClose = styled.div`
@@ -55,8 +55,7 @@ const Button = styled.button`
 `
 
 let RightSection = props => {
-  const {resume} = props;
-  console.log(props);
+  const { resume } = props
   const [hidden, setHidden] = useState(0)
   const onClick = event => {
     let temp
@@ -78,7 +77,7 @@ let RightSection = props => {
         </Column>
       </Row>
       <Row>
-        <Projects />
+        <Projects projects={resume.projects} />
       </Row>
     </Section>
   )

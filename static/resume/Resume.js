@@ -229,6 +229,13 @@ let Resume = {
       courses: ["DB1101 - Basic SQL"],
     },
   ],
+  projects:[
+    {name:"911autodr",href:"https://911autodr.com/"},
+    {name:"vidup",href:"https://vidup.lewismatos.com/login"},
+    {name:"iartist",href:"https://iartist.lewismatos.com/"},
+    {name:"minimaxtictactoe",href:"http://lewismatos.github.io/MiniMaxTicTacToe/"},
+    {name:"birdgame",href:"https://lewismatos.github.io/birdGame/"},
+  ],
   awards: [
     {
       title: "Award",

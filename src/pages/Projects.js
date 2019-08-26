@@ -1,47 +1,43 @@
 import React from "react"
 import styled from "styled-components"
 import { HeaderGradient } from "../styles/HeaderGradient"
+import ProjectImage from "../components/ProjectImage"
 
 const Section = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: auto;
-  padding:2rem;
+  height: 100%;
+  padding: 2rem;
   border-top: 2px solid black;
 `
 const Header = styled(HeaderGradient)`
   text-align: left;
 `
-const Project = styled.div`
-  margin: 0 .2rem 2rem 0;
-  background: url(${props => props.url});
-  height: 47rem;
-  background-size: cover;
-  background-position: center center;
-  box-shadow: 3px 3px 5px 6px #ccc;
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
 `
-
-let Projects = () => {
+let Projects = ({ projects }) => {
+  console.log(projects)
   return (
     <Section>
       <Header>Projects</Header>
-      <a href="https://911autodr.com/" target="_blank" rel="noopener noreferrer">
-        <Project url="../img/911AutoDrImage.PNG" />
-      </a>
-      <a href="https://d26yj69bke7qnx.cloudfront.net/login" target="_blank" rel="noopener noreferrer">
-        <Project url="../img/VidUpImage.PNG"  />
-      </a>
-      <a href="https://iartist.lewismatos.com/" target="_blank" rel="noopener noreferrer">
-        <Project url="../img/iArtistImage.PNG"  />
-      </a>
-      <a href="http://lewismatos.github.io/MiniMaxTicTacToe/" target="_blank" rel="noopener noreferrer">
-        <Project url="../img/MiniMaxImage.PNG"  />
-      </a>
-      <a href="https://lewismatos.github.io/birdGame/" target="_blank" rel="noopener noreferrer">
-        <Project url="../img/birdGameImage.PNG"  />
-      </a>
+      <Container>
+        {projects.map(project => {
+          return (
+            <a
+              key={project.name}
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ProjectImage file={`${project.name}.png`} />
+            </a>
+          )
+        })}
+      </Container>
     </Section>
   )
 }

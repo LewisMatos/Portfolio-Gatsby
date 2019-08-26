@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import ProfileImage from "../components/ProfileImage"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import {
   faGithub,
@@ -18,18 +18,17 @@ const Section = styled.div`
   flex: 1 0 30%;
 `
 
-const ProfileImage = styled(Img)`
-  position: sticky;
+const Content = styled.div`
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  font-size: 2rem;
   height: 100vh;
-  width: 100%;
-  background-image: url("src/images/profileImage.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  top: 0px;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  width: 30%;
   &:before {
     content: "";
     position: absolute;
@@ -46,28 +45,14 @@ const ProfileImage = styled(Img)`
     );
     opacity: 0.45;
   }
-
   @media (max-width: 1200px) {
-    position: relative;
+    position: absolute;
+    width: 100%;
   }
 `
 
-const Content = styled.div`
-  display:flex;
-    position: fixed;
-    justify-content: center;
-    align-items:center;
-    text-align:center;
-    flex-direction:column;
-    color: white;
-    font-size: 2rem;
-    margin:auto;
-    width: 100%;
-    height: 100%;
-    @media (max-width: 1200px) {
-    position: absolute;
-  }
-}
+const Details = styled.div`
+  z-index: 100;
 `
 
 const Anchor = styled.a`
@@ -153,60 +138,59 @@ const LabelLI = styled.li`
     position: relative;
   }
 `
-
 let LeftSection = props => {
-  console.log(props);
-  let {basics,headerImage} = props;
+  let { basics } = props
   return (
     <Section>
       {/* <ProfileImage /> */}
-      <ProfileImage fluid={headerImage}/>
+      <ProfileImage />
       <Content>
-        <div>
-          <h1>
-            <strong>
-              <span>{`${basics.firstname} ${basics.middleinitial}`}</span>
-            </strong>
-          </h1>
-          <h1>
-            <strong className="lastname-animation">{basics.lastname}</strong>
-          </h1>
-        </div>
-        <h2>{basics.label}</h2>
-        <p />
-        <div>
-          <h3>{`${basics.location.address}, ${basics.location.region}`}</h3>
-          <h3>
-            <Anchor href={`tel: ${basics.phone}`}>{basics.phone}</Anchor>
-          </h3>
-          <h3>
-            <Anchor href={`mailto: ${basics.email}`}>{basics.email}</Anchor>
-          </h3>
-        </div>
-        <UL>
-          {basics.profiles.map(profile => {
-            let fontAwesomeIcons = {
-              github: faGithub,
-              linkedin: faLinkedin,
-              twitter: faTwitter,
-              resume: faFilePdf,
-            }
-            return (
-              <LabelLI key={profile.network} aria-label={profile.network}>
-                <Anchor href={profile.url}>
-                  <FontAwesomeIcon
-                    icon={fontAwesomeIcons[profile.network]}
-                    size="2x"
-                  />
-                </Anchor>
-              </LabelLI>
-            )
-          })}
-        </UL>
+        <Details>
+          <div>
+            <h1>
+              <strong>
+                <span>{`${basics.firstname} ${basics.middleinitial}`}</span>
+              </strong>
+            </h1>
+            <h1>
+              <strong className="lastname-animation">{basics.lastname}</strong>
+            </h1>
+          </div>
+          <h2>{basics.label}</h2>
+          <p />
+          <div>
+            <h3>{`${basics.location.address}, ${basics.location.region}`}</h3>
+            <h3>
+              <Anchor href={`tel: ${basics.phone}`}>{basics.phone}</Anchor>
+            </h3>
+            <h3>
+              <Anchor href={`mailto: ${basics.email}`}>{basics.email}</Anchor>
+            </h3>
+          </div>
+          <UL>
+            {basics.profiles.map(profile => {
+              let fontAwesomeIcons = {
+                github: faGithub,
+                linkedin: faLinkedin,
+                twitter: faTwitter,
+                resume: faFilePdf,
+              }
+              return (
+                <LabelLI key={profile.network} aria-label={profile.network}>
+                  <Anchor href={profile.url}>
+                    <FontAwesomeIcon
+                      icon={fontAwesomeIcons[profile.network]}
+                      size="2x"
+                    />
+                  </Anchor>
+                </LabelLI>
+              )
+            })}
+          </UL>
+        </Details>
       </Content>
     </Section>
   )
 }
 
 export default LeftSection
-
