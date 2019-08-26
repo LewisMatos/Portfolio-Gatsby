@@ -17,7 +17,7 @@ const Header = styled(HeaderGradient)`
 const Company = styled.div`
   display: flex;
   justify-content: space-between;
-  font-size: 1.4rem;
+  font-size: 1.4em;
   font-weight: 500;
 `
 const Position = styled.div`

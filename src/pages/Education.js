@@ -14,18 +14,28 @@ const Section = styled.div`
   border-top: 2px solid black;
 `}
 `
+const Header = styled(HeaderGradient)``
 
-const School = styled.div`
+const Row = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap:wrap;
   & > span {
+    font-size: 1em;
     margin-right: 0.5rem;
-    line-height: 2rem;
+    line-height: 2.2em;
     font-weight: 500;
+  &:last-child{
+    font-size:.9em;
   }
+  }
+
 `
 const Edu = styled.div`
-  font-size: 1rem;
+  font-size: 1em;
+  & > div:last-child{
+    font-size: 1.2em;
+  }
 `
 
 function renderJson(data) {
@@ -33,17 +43,17 @@ function renderJson(data) {
   return education.map(edu => {
     return (
       <Edu key={edu.institution}>
-        <School>
+        <Row>
           <span>{edu.institution}</span>
           <span>{`${edu.startDate} - ${edu.endDate}`}</span>
-        </School>
+        </Row>
         <div>{edu.area}</div>
       </Edu>
     )
   })
 }
 
-const Basics = props => {
+const Content = props => {
   return (
     <StaticQuery
       query={graphql`
@@ -65,12 +75,11 @@ const Basics = props => {
   )
 }
 
-const Header = styled(HeaderGradient)``
-let Education = ({ education }) => {
+let Education = () => {
   return (
     <Section>
       <Header>Education</Header>
-      <Basics />
+      <Content />
     </Section>
   )
 }

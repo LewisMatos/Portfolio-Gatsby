@@ -35,9 +35,6 @@ const Row = styled.div`
   transition-timing-function: cubic-bezier(0, 0.2, 0.5, 1);
   max-height: ${props => (props.hide ? 0 : "100%")};
 `
-const sliderClose = styled.div`
-  max-height: 0;
-`
 const Button = styled.button`
   position: absolute;
   width:2rem;

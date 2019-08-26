@@ -47,7 +47,7 @@ const Content = styled.div`
     );
     opacity: 0.45;
   }
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
     position: absolute;
     width: 100%;
   `}
@@ -220,8 +220,7 @@ const Basics = props => {
   )
 }
 
-let LeftSection = props => {
-  let { basics } = props
+let LeftSection = () => {
   return (
     <Section>
       <ProfileImage />

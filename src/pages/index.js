@@ -11,7 +11,7 @@ const Section = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
     flex-direction: column;
   `}
 `

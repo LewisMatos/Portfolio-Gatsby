@@ -30,14 +30,6 @@ export const GlobalStyle = createGlobalStyle`
 
   @media screen and (min-width: 80rem) {
   :root {
-    /* font-size: calc(0.675rem + 0.25 * (100vw - 80rem) / 40); */
-    font-size: .875rem;
-
+    font-size: calc(0.675rem + 0.25 * (100vw - 80rem) / 40);
   }
-
-  @media screen and (min-width: 120rem) {
-    :root{
-      font-size: .875rem;
-    }
-}
 `
