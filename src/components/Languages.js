@@ -34,7 +34,7 @@ export default function Languages() {
               <ToolTips key={skill.name} aria-label={skill.name}>
                 <SkillImg
                   backgroundColor={skill.color}
-                  src="../img/styledcomponents.png"
+                  src="../img/styled-components.png"
                   alt=""
                 />
               </ToolTips>
