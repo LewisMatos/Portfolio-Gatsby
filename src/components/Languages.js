@@ -6,6 +6,7 @@ import {
   ToolTips,
   SkillImg,
 } from "../styles/LanguagesTools"
+import styledcomponents from '../images/styledcomponents.png';
 
 export default function Languages() {
   let skills = [
@@ -34,7 +35,7 @@ export default function Languages() {
               <ToolTips key={skill.name} aria-label={skill.name}>
                 <SkillImg
                   backgroundColor={skill.color}
-                  src="../img/styled-components.png"
+                  src={styledcomponents}
                   alt=""
                 />
               </ToolTips>

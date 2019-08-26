@@ -61,7 +61,7 @@ function renderJson(data) {
   })
 }
 
-const Basics = props => {
+const Work = props => {
   return (
     <StaticQuery
       query={graphql`
@@ -90,7 +90,7 @@ let Experience = () => {
   return (
     <Section>
       <Header>Experience</Header>
-      <Basics />
+      <Work />
     </Section>
   )
 }

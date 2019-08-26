@@ -37,7 +37,7 @@ function renderJson(data) {
   })
 }
 
-const Basics = props => {
+const Project = props => {
   return (
     <StaticQuery
       query={graphql`
@@ -60,7 +60,7 @@ let Projects = ({ projects }) => {
     <Section>
       <Header>Projects</Header>
       <Container>
-        <Basics />
+        <Project />
       </Container>
     </Section>
   )
