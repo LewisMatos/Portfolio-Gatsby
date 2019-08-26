@@ -1,6 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-export default () => {
+
+
+
+let HeadSection = () => {
   let googleAnalyticsId = "UA-118889114-1";
   return (
     <Helmet>
@@ -93,3 +96,4 @@ export default () => {
     </Helmet>
   )
 }
+export default HeadSection

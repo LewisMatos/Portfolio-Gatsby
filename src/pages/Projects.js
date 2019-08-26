@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { StaticQuery, graphql } from "gatsby"
 import { HeaderGradient } from "../styles/HeaderGradient"
 import ProjectImage from "../components/ProjectImage"
 
@@ -19,24 +20,47 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
 `
+
+function renderJson(data) {
+  const { projects } = data.dataJson
+  return projects.map(project => {
+    return (
+      <a
+        key={project.name}
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <ProjectImage file={`${project.name}.png`} />
+      </a>
+    )
+  })
+}
+
+const Basics = props => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          dataJson {
+            projects {
+              name
+              href
+            }
+          }
+        }
+      `}
+      render={data => renderJson(data)}
+    />
+  )
+}
+
 let Projects = ({ projects }) => {
-  console.log(projects)
   return (
     <Section>
       <Header>Projects</Header>
       <Container>
-        {projects.map(project => {
-          return (
-            <a
-              key={project.name}
-              href={project.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <ProjectImage file={`${project.name}.png`} />
-            </a>
-          )
-        })}
+        <Basics />
       </Container>
     </Section>
   )

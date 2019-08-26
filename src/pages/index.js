@@ -1,7 +1,5 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-
-import Resume from "../../static/resume/Resume"
 import { GlobalStyle } from "../styles/GlobalStyle"
 import HeadSection from "./HeadSection"
 import LeftSection from "./LeftSection"
@@ -23,12 +21,8 @@ export default class index extends Component {
         <HeadSection />
         <GlobalStyle />
         <Section>
-          <LeftSection
-            basics={Resume.basics}
-          />
-          <RightSection
-            resume={Resume}
-          />
+          <LeftSection />
+          <RightSection/>
         </Section>
       </>
     )

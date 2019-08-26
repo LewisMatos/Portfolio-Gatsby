@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { StaticQuery, graphql } from "gatsby"
 import { HeaderGradient } from "../styles/HeaderGradient"
 
 const Section = styled.div`
@@ -11,34 +12,61 @@ const Section = styled.div`
 `
 
 const School = styled.div`
-display:flex;
-justify-content:space-between;
-& > span{
-  margin-right:.5rem;
-  line-height:2rem;
-  font-weight:500;
-}
+  display: flex;
+  justify-content: space-between;
+  & > span {
+    margin-right: 0.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
 `
 const Edu = styled.div`
-font-size:1rem;
+  font-size: 1rem;
 `
+
+function renderJson(data) {
+  const { education } = data.dataJson
+  return education.map(edu => {
+    return (
+      <Edu key={edu.institution}>
+        <School>
+          <span>{edu.institution}</span>
+          <span>{`${edu.startDate} - ${edu.endDate}`}</span>
+        </School>
+        <div>{edu.area}</div>
+      </Edu>
+    )
+  })
+}
+
+const Basics = props => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          dataJson {
+            education {
+              institution
+              area
+              studyType
+              startDate
+              endDate
+              gpa
+            }
+          }
+        }
+      `}
+      render={data => renderJson(data)}
+    />
+  )
+}
 
 const Header = styled(HeaderGradient)``
 let Education = ({ education }) => {
   return (
     <Section>
       <Header>Education</Header>
-      {education.map(edu => {
-        return (
-          <Edu key={edu.institution}>
-            <School>
-              <span>{edu.institution}</span>
-              <span>{`${edu.startDate} - ${edu.endDate}`}</span>
-            </School>
-              <div>{edu.area}</div>
-          </Edu>
-        )
-      })}
+      <Basics />
     </Section>
   )
 }

@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import ProfileImage from "../components/ProfileImage"
 import { library } from "@fortawesome/fontawesome-svg-core"
@@ -138,56 +139,93 @@ const LabelLI = styled.li`
     position: relative;
   }
 `
+
+function renderJson(data) {
+  const { basics } = data.dataJson
+  return (
+    <Details>
+      <div>
+        <h1>
+          <strong>
+            <span>{`${basics.firstname} ${basics.middleinitial}`}</span>
+          </strong>
+        </h1>
+        <h1>
+          <strong className="lastname-animation">{basics.lastname}</strong>
+        </h1>
+      </div>
+      <h2>{basics.label}</h2>
+      <p />
+      <div>
+        <h3>{`${basics.location.address}, ${basics.location.region}`}</h3>
+        <h3>
+          <Anchor href={`tel: ${basics.phone}`}>{basics.phone}</Anchor>
+        </h3>
+        <h3>
+          <Anchor href={`mailto: ${basics.email}`}>{basics.email}</Anchor>
+        </h3>
+      </div>
+      <UL>
+        {basics.profiles.map(profile => {
+          let fontAwesomeIcons = {
+            github: faGithub,
+            linkedin: faLinkedin,
+            twitter: faTwitter,
+            resume: faFilePdf,
+          }
+          return (
+            <LabelLI key={profile.network} aria-label={profile.network}>
+              <Anchor href={profile.url}>
+                <FontAwesomeIcon
+                  icon={fontAwesomeIcons[profile.network]}
+                  size="2x"
+                />
+              </Anchor>
+            </LabelLI>
+          )
+        })}
+      </UL>
+    </Details>
+  )
+}
+
+const Basics = props => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query{
+          dataJson {
+            basics {
+              firstname
+              middleinitial
+              lastname
+              email
+              phone
+              location {
+                address
+                region
+              }
+              profiles {
+                network
+                username
+                url
+              }
+            }
+          }
+        }
+      `}
+      render={data => renderJson(data)}
+    />
+  )
+}
+
 let LeftSection = props => {
   let { basics } = props
   return (
     <Section>
-      {/* <ProfileImage /> */}
       <ProfileImage />
       <Content>
-        <Details>
-          <div>
-            <h1>
-              <strong>
-                <span>{`${basics.firstname} ${basics.middleinitial}`}</span>
-              </strong>
-            </h1>
-            <h1>
-              <strong className="lastname-animation">{basics.lastname}</strong>
-            </h1>
-          </div>
-          <h2>{basics.label}</h2>
-          <p />
-          <div>
-            <h3>{`${basics.location.address}, ${basics.location.region}`}</h3>
-            <h3>
-              <Anchor href={`tel: ${basics.phone}`}>{basics.phone}</Anchor>
-            </h3>
-            <h3>
-              <Anchor href={`mailto: ${basics.email}`}>{basics.email}</Anchor>
-            </h3>
-          </div>
-          <UL>
-            {basics.profiles.map(profile => {
-              let fontAwesomeIcons = {
-                github: faGithub,
-                linkedin: faLinkedin,
-                twitter: faTwitter,
-                resume: faFilePdf,
-              }
-              return (
-                <LabelLI key={profile.network} aria-label={profile.network}>
-                  <Anchor href={profile.url}>
-                    <FontAwesomeIcon
-                      icon={fontAwesomeIcons[profile.network]}
-                      size="2x"
-                    />
-                  </Anchor>
-                </LabelLI>
-              )
-            })}
-          </UL>
-        </Details>
+        <Basics />
       </Content>
     </Section>
   )

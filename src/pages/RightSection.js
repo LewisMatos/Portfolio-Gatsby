@@ -52,10 +52,10 @@ const Button = styled.button`
     &:hover, &:focus, &:active {
       letter-spacing: 0.125rem;
     }
+  }
 `
 
 let RightSection = props => {
-  const { resume } = props
   const [hidden, setHidden] = useState(0)
   const onClick = event => {
     let temp
@@ -70,14 +70,14 @@ let RightSection = props => {
     <Section>
       <Button onClick={onClick}> {hidden ? "+" : "-"} </Button>
       <Row hide={hidden}>
-        <Experience work={resume.work} />
+        <Experience/>
         <Column>
-          <Education education={resume.education} />
+          <Education/>
           <Skills />
         </Column>
       </Row>
       <Row>
-        <Projects projects={resume.projects} />
+        <Projects/>
       </Row>
     </Section>
   )
