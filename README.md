@@ -1,19 +1,20 @@
-# Lewis Matos [Portfolio]
-Updated Personal Site using Gatsby and AWS.
+# Lewis Matos [Portfolio](https://lewismatos.com)
 
-### Technologies
+# Updated Personal Site using Gatsby and AWS.
+
+## Technologies
 
 ## Backend
 
 * AWS
 * S3
 * CloudFront
+* Graphql
 * Route53
 
 ## Frontend
 * React
 * Gatsbyjs
-* Graphql
 * Styled-components
 
 
