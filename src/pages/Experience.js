@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+
 import { HeaderGradient } from "../styles/HeaderGradient"
 
 const Section = styled.div`

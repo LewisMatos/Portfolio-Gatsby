@@ -1,10 +1,8 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
-
-
 let HeadSection = () => {
-  let googleAnalyticsId = "UA-118889114-1";
+  let googleAnalyticsId = "UA-118889114-1"
   return (
     <Helmet>
       <script
@@ -84,10 +82,6 @@ let HeadSection = () => {
         content="https://s3.amazonaws.com/lewismatos.com/images/og.png"
       />
 
-      <link
-        href="https://fonts.googleapis.com/css?family=Ubuntu"
-        rel="stylesheet"
-      />
       <link
         rel="icon"
         type="image/x-icon"

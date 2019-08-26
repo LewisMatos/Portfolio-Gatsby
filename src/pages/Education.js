@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import media from "styled-media-query"
 import { StaticQuery, graphql } from "gatsby"
 import { HeaderGradient } from "../styles/HeaderGradient"
 
@@ -9,6 +10,9 @@ const Section = styled.div`
   text-align: left;
   padding: 2rem;
   border-bottom: 2px solid black;
+  ${media.lessThan("large")`
+  border-top: 2px solid black;
+`}
 `
 
 const School = styled.div`

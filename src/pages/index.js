@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { GlobalStyle } from "../styles/GlobalStyle"
+import media from "styled-media-query"
+
 import HeadSection from "./HeadSection"
 import LeftSection from "./LeftSection"
 import RightSection from "./RightSection"
@@ -9,9 +11,9 @@ const Section = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  @media (max-width: 1200px) {
+  ${media.lessThan("large")`
     flex-direction: column;
-  }
+  `}
 `
 
 export default class index extends Component {
@@ -22,7 +24,7 @@ export default class index extends Component {
         <GlobalStyle />
         <Section>
           <LeftSection />
-          <RightSection/>
+          <RightSection />
         </Section>
       </>
     )

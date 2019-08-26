@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import media from "styled-media-query"
 import Education from "./Education.js"
 import Skills from "./Skills.js"
 import Experience from "./Experience.js"
@@ -19,6 +20,9 @@ const Column = styled.div`
   text-align: center;
   border-left: 2px solid black;
   flex: 1 0 40%;
+  ${media.lessThan("medium")`
+  border:none;
+  `}
 }
 `
 const Row = styled.div`
@@ -53,6 +57,9 @@ const Button = styled.button`
       letter-spacing: 0.125rem;
     }
   }
+  ${media.lessThan("medium")`
+    display:none;
+  `}
 `
 
 let RightSection = props => {
@@ -70,14 +77,14 @@ let RightSection = props => {
     <Section>
       <Button onClick={onClick}> {hidden ? "+" : "-"} </Button>
       <Row hide={hidden}>
-        <Experience/>
+        <Experience />
         <Column>
-          <Education/>
+          <Education />
           <Skills />
         </Column>
       </Row>
       <Row>
-        <Projects/>
+        <Projects />
       </Row>
     </Section>
   )

@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import ProfileImage from "../components/ProfileImage"
+import media from "styled-media-query"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import {
   faGithub,
@@ -46,10 +47,10 @@ const Content = styled.div`
     );
     opacity: 0.45;
   }
-  @media (max-width: 1200px) {
+  ${media.lessThan("large")`
     position: absolute;
     width: 100%;
-  }
+  `}
 `
 
 const Details = styled.div`
@@ -193,7 +194,7 @@ const Basics = props => {
   return (
     <StaticQuery
       query={graphql`
-        query{
+        query {
           dataJson {
             basics {
               firstname
