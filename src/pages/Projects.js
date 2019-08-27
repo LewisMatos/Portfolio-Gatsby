@@ -30,8 +30,9 @@ function renderJson(data) {
         href={project.href}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={project.name}
       >
-        <ProjectImage file={`${project.name}.png`} />
+        <ProjectImage file={`${project.name}.png`} alt={project.name} />
       </a>
     )
   })
