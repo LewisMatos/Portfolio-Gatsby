@@ -27,7 +27,7 @@
 
 > Lewis Matos Portfolio site using GatsbyJS
 
-### 🏠 [Homepage](https://github.com/LewisMatos/Portfolio-Gatsby#readme)
+### 🏠 [Website](https://lewismatos.com)
 
 
 # ![lewismatos](https://github.com/LewisMatos/Portfolio-Gatsby/blob/master/src/images/siteCapture.PNG)
