@@ -6,12 +6,30 @@
 const path = require(`path`)
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: "https://lewismatos.com",
+  },
   plugins: [
     `gatsby-transformer-json`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-robots-txt",
+    {
+      resolve: "gatsby-plugin-html-attributes",
+      options: {
+        lang: "en",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://lewismatos.com",
+        sitemap: "https://lewismatos.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -44,6 +62,6 @@ module.exports = {
         path: path.join(__dirname, `src`, `data`),
       },
     },
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
   ],
 }
