@@ -30,6 +30,7 @@ export default function Tools() {
                   <SkillImg
                     width="24rem"
                     backgroundColor={tool.color}
+                    alt="amazon web service certification"
                     src="https://virtualbrakeman.files.wordpress.com/2017/01/amazon-web-services-certified-solutions-architect-associate.png?w=588"
                   />
                 </a>

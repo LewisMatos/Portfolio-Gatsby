@@ -36,7 +36,7 @@ export default function Languages() {
                 <SkillImg
                   backgroundColor={skill.color}
                   src={styledcomponents}
-                  alt=""
+                  alt={skill.name}
                 />
               </ToolTips>
             )
