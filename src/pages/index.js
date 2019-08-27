@@ -2,10 +2,9 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import GlobalStyle from "../styles/GlobalStyle"
 import media from "styled-media-query"
-import LeftSection from "./LeftSection"
-import RightSection from "./RightSection"
-import Metatag from "./MetaTag"
-import Canvas from "../components/MouseTrail"
+import LeftSection from "../components/LeftSection"
+import RightSection from "../components/RightSection"
+import Metatag from "../components/MetaTag"
 
 const Section = styled.div`
   display: flex;
@@ -21,7 +20,6 @@ export default class index extends Component {
     return (
       <>
         <Metatag />
-        <Canvas />
         <Section>
           <LeftSection />
           <RightSection />

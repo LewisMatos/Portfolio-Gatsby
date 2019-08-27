@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import Languages from "../components/Languages"
-import Tools from "../components/Tools"
+import Languages from "./Languages"
+import Tools from "./Tools"
 
 const Section = styled.div`
   display: flex;

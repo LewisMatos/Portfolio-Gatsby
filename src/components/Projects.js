@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
 import { HeaderGradient } from "../styles/HeaderGradient"
 import { Header } from '../styles/Header';
-import ProjectImage from "../components/ProjectImage"
+import ProjectImage from "./ProjectImage"
 
 const Section = styled.div`
   display: flex;

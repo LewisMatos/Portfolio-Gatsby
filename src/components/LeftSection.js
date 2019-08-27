@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import ProfileImage from "../components/ProfileImage"
+import ProfileImage from "./ProfileImage"
 import media from "styled-media-query"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import {
