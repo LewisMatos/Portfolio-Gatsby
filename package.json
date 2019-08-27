@@ -2,8 +2,10 @@
   "name": "portfolio-gatsby",
   "private": true,
   "description": "Lewis Matos Portfolio site using GatsbyJS",
+  "author": "Lewis Matos",
   "version": "0.1.0",
   "license": "MIT",
+  "homepage": "https://github.com/LewisMatos/Portfolio-Gatsby#readme",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
