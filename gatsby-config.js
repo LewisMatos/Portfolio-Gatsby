@@ -15,15 +15,16 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    "gatsby-plugin-robots-txt",
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
-      resolve: "gatsby-plugin-html-attributes",
+      resolve: `gatsby-plugin-html-attributes`,
       options: {
         lang: "en",
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: `gatsby-plugin-robots-txt`,
       options: {
         host: "https://lewismatos.com",
         sitemap: "https://lewismatos.com/sitemap.xml",
