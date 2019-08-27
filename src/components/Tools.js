@@ -1,11 +1,12 @@
 import React from "react"
 import {
   StyledIcon,
-  Header,
   ToolTip,
   ToolTips,
   SkillImg,
 } from "../styles/LanguagesTools"
+import { HeaderGradient } from "../styles/HeaderGradient"
+import { Header } from "../styles/Header"
 
 export default function Tools() {
   let tools = [
@@ -20,7 +21,9 @@ export default function Tools() {
 
   return (
     <>
-      <Header>Tools</Header>
+      <HeaderGradient>
+        <Header>Tools</Header>
+      </HeaderGradient>
       <ToolTip className="">
         {tools.map(tool => {
           if (tool.name === "amazonwebservices") {

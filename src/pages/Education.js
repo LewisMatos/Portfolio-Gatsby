@@ -3,6 +3,7 @@ import styled from "styled-components"
 import media from "styled-media-query"
 import { StaticQuery, graphql } from "gatsby"
 import { HeaderGradient } from "../styles/HeaderGradient"
+import { Header } from "../styles/Header"
 
 const Section = styled.div`
   display: flex;
@@ -14,26 +15,24 @@ const Section = styled.div`
   border-top: 2px solid black;
 `}
 `
-const Header = styled(HeaderGradient)``
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   & > span {
     font-size: 1em;
     margin-right: 0.5rem;
     line-height: 2.2em;
     font-weight: 500;
-  &:last-child{
-    font-size:.9em;
+    &:last-child {
+      font-size: 0.9em;
+    }
   }
-  }
-
 `
 const Edu = styled.div`
   font-size: 1em;
-  & > div:last-child{
+  & > div:last-child {
     font-size: 1.2em;
   }
 `
@@ -78,7 +77,9 @@ const Content = props => {
 let Education = () => {
   return (
     <Section>
-      <Header>Education</Header>
+      <HeaderGradient>
+        <Header> Education</Header>
+      </HeaderGradient>
       <Content />
     </Section>
   )

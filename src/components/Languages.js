@@ -1,12 +1,13 @@
 import React from "react"
 import {
   StyledIcon,
-  Header,
   ToolTip,
   ToolTips,
   SkillImg,
 } from "../styles/LanguagesTools"
-import styledcomponents from '../images/styledcomponent.png';
+import styledcomponents from "../images/styledcomponent.png"
+import { HeaderGradient } from "../styles/HeaderGradient"
+import { Header } from "../styles/Header"
 
 export default function Languages() {
   let skills = [
@@ -27,7 +28,9 @@ export default function Languages() {
   ]
   return (
     <>
-      <Header>{"Languages & Frameworks"}</Header>
+      <HeaderGradient>
+        <Header>Languages & Frameworks</Header>
+      </HeaderGradient>
       <ToolTip>
         {skills.map(skill => {
           if (skill.name === "styled-component") {

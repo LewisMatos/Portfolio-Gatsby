@@ -1,15 +1,11 @@
 import DevIcon from "devicon-react-svg"
 import styled from "styled-components"
-import { HeaderGradient } from "../styles/HeaderGradient"
-
 export const StyledIcon = styled(DevIcon)`
 
   fill: ${props => props.color || "black "};
   width: 6rem;
   margin-right: 0.5rem;
 `
-export const Header = styled(HeaderGradient)``
-
 export const ToolTip = styled.div`
   display: flex;
   flex-direction: row;

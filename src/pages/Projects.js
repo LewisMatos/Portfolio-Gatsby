@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
 import { HeaderGradient } from "../styles/HeaderGradient"
+import { Header } from '../styles/Header';
 import ProjectImage from "../components/ProjectImage"
 
 const Section = styled.div`
@@ -13,9 +14,7 @@ const Section = styled.div`
   padding: 2rem;
   border-top: 2px solid black;
 `
-const Header = styled(HeaderGradient)`
-  text-align: left;
-`
+
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -59,7 +58,7 @@ const Project = props => {
 let Projects = ({ projects }) => {
   return (
     <Section>
-      <Header>Projects</Header>
+      <HeaderGradient><Header>Projects</Header></HeaderGradient>
       <Container>
         <Project />
       </Container>

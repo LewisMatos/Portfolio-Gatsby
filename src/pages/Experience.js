@@ -3,6 +3,8 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import { HeaderGradient } from "../styles/HeaderGradient"
+import { Header } from "../styles/Header"
+
 
 const Section = styled.div`
   display: flex;
@@ -11,9 +13,7 @@ const Section = styled.div`
   padding: 2rem;
   flex: 1 0 60%;
 `
-const Header = styled(HeaderGradient)`
-  text-align: left;
-`
+
 const Company = styled.div`
   display: flex;
   justify-content: space-between;
@@ -89,7 +89,10 @@ const Work = props => {
 let Experience = () => {
   return (
     <Section>
-      <Header>Experience</Header>
+      <HeaderGradient>
+        <Header>Experience</Header>
+      </HeaderGradient>
+
       <Work />
     </Section>
   )

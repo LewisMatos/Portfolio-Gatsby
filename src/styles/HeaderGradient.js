@@ -1,39 +1,55 @@
 import styled from "styled-components"
 
 export const HeaderGradient = styled.div`
-  font-size: 2rem;
-  padding: 0 0 1rem 0;
-  background-image: -webkit-linear-gradient(
-    left,
-    #21bdb7,
-    #585858,
-    #fff
-  ); /* For Chrome and Safari */
-  background-image: -moz-linear-gradient(
-    left,
-    #21bdb7,
-    #585858,
-    #fff
-  ); /* For old Fx (3.6 to 15) */
-  background-image: -ms-linear-gradient(
-    left,
-    #21bdb7,
-    #585858,
-    #fff
-  ); /* For pre-releases of IE 10*/
-  background-image: -o-linear-gradient(
-    left,
-    #21bdb7,
-    #585858,
-    #fff
-  ); /* For old Opera (11.1 to 12.0) */
-  background-image: linear-gradient(
-    to right,
-    #21bdb7,
-    #585858,
-    #fff
-  ); /* Standard syntax; must be last */
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  text-align: left;
+  background: linear-gradient(
+    270deg,
+    #6fba82,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  background-size: 1000%;
+  -webkit-animation: GradientAnimation 14s ease infinite;
+  -moz-animation: GradientAnimation 14s ease infinite;
+  animation: GradientAnimation 14s ease infinite;
+
+  @-webkit-keyframes GradientAnimation {
+    0% {
+      background-position: 69% 0%;
+    }
+    50% {
+      background-position: 32% 100%;
+    }
+    100% {
+      background-position: 69% 0%;
+    }
+  }
+  @-moz-keyframes GradientAnimation {
+    0% {
+      background-position: 69% 0%;
+    }
+    50% {
+      background-position: 32% 100%;
+    }
+    100% {
+      background-position: 69% 0%;
+    }
+  }
+  @keyframes GradientAnimation {
+    0% {
+      background-position: 69% 0%;
+    }
+    50% {
+      background-position: 32% 100%;
+    }
+    100% {
+      background-position: 69% 0%;
+    }
+  }
 `
