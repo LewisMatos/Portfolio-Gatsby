@@ -171,7 +171,7 @@ function renderJson(data) {
           }
           return (
             <LabelLI key={profile.network} aria-label={profile.network}>
-              <Anchor href={profile.url}>
+              <Anchor href={profile.url} aria-label={profile.network}>
                 <FontAwesomeIcon
                   icon={fontAwesomeIcons[profile.network]}
                   size="2x"
