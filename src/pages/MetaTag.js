@@ -24,6 +24,9 @@ let Metatag = () => {
         content="9v3oLHbMUMv4mxnXzSA6SBUnLUidtwhESIGb9leUQwk"
       />
 
+    {`<!-- pinterest -->`}
+<meta name="p:domain_verify" content="19c2df8d74ee3fadfc189ef6c3786630"/>
+
       {`<!-- Open Graph / Facebook -->`}
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://lewismatos.com/" />
