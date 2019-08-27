@@ -40,7 +40,7 @@ const Content = styled.div`
     left: 0;
     background: #rgba(117, 19, 93, 0.73);
     background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));
-    opacity: 0.45;
+    opacity: 0.95;
   }
   ${media.lessThan("medium")`
     position: absolute;
