@@ -4,7 +4,8 @@ import GlobalStyle from "../styles/GlobalStyle"
 import media from "styled-media-query"
 import LeftSection from "./LeftSection"
 import RightSection from "./RightSection"
-import Metatag from "./MetaTag";
+import Metatag from "./MetaTag"
+import Canvas from "../components/MouseTrail"
 
 const Section = styled.div`
   display: flex;
@@ -20,11 +21,12 @@ export default class index extends Component {
     return (
       <>
         <Metatag />
-        <GlobalStyle/>
+        <Canvas />
         <Section>
           <LeftSection />
           <RightSection />
         </Section>
+        <GlobalStyle />
       </>
     )
   }

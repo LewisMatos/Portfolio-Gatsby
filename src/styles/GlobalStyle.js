@@ -1,4 +1,4 @@
-import  "bootstrap/dist/css/bootstrap.css"
+import "bootstrap/dist/css/bootstrap.css"
 import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
@@ -16,18 +16,12 @@ export default createGlobalStyle`
     *,
     ::before,
     ::after {
+      font-family: 'Jost', serif;
       box-sizing: inherit;
     }
 
-    h1, h2, h3{
-      font-family: 'Vollkorn', serif;
-    }
     h1{
-      font-size: 3rem !important;
-    }
-
-    a{
-      color:white;
+      font-size: 5rem !important;
     }
 
     @media screen and (min-width: 80rem) {

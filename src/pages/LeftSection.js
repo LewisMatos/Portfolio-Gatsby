@@ -151,7 +151,6 @@ function renderJson(data) {
         </h1>
       </div>
       <h2>{basics.label}</h2>
-      <p />
       <div>
         <h3>{`${basics.location.address}, ${basics.location.region}`}</h3>
         <h3>
@@ -194,6 +193,7 @@ const Basics = props => {
             basics {
               firstname
               middleinitial
+              label
               lastname
               email
               phone

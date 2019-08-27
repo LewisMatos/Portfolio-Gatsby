@@ -51,6 +51,7 @@ let Metatag = () => {
         content="Love everything code. I strive for excellence, always pushing myself and learning something new."
       />
       <meta property="twitter:image" content={portfolio_1200x628} />
+      <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css"/>
     </Helmet>
   )
 }
