@@ -1,23 +1,36 @@
 <h1 align="center">Welcome to portfolio-gatsby 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/gatsbyjs/gatsby-starter-hello-world#readme">
+  <a href="https://github.com/LewisMatos/Portfolio-Gatsby/#readme">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
-  <a href="https://github.com/gatsbyjs/gatsby-starter-hello-world/graphs/commit-activity">
+  <a href="https://github.com/LewisMatos/Portfolio-Gatsby//graphs/commit-activity">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
   </a>
-  <a href="https://github.com/gatsbyjs/gatsby-starter-hello-world/blob/master/LICENSE">
+  <a href="https://github.com/LewisMatos/Portfolio-Gatsby/pulse">
+    <img alt="Top Languages" src="https://img.shields.io/github/languages/top/LewisMatos/Portfolio-Gatsby.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/LewisMatos/Portfolio-Gatsby/network/dependencies">
+    <img alt="Dependencies" src="https://img.shields.io/david/lewismatos/Portfolio-Gatsby.svg" target="_blank" />
+  </a>
+   <a href="https://github.com/LewisMatos/Portfolio-Gatsby/network/dependencies">
+    <img alt="Repo Size" src="https://img.shields.io/github/repo-size/LewisMatos/Portfolio-Gatsby.svg" target="_blank" />
+  </a>
+     <a href="https://github.com/LewisMatos/Portfolio-Gatsby/network/dependencies">
+    <img alt="Code Size Size" src="https://img.shields.io/github/languages/code-size/LewisMatos/Portfolio-Gatsby.svg" target="_blank" />
+  </a>
+    <a href="https://github.com/LewisMatos/Portfolio-Gatsby//blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
 </p>
+
 
 > Lewis Matos Portfolio site using GatsbyJS
 
 ### 🏠 [Homepage](https://github.com/LewisMatos/Portfolio-Gatsby#readme)
 
 
-  ![lewismatos](https://raw.githubusercontent.com/LewisMatos/Portfolio-Gatsby/master/src/images/siteCapture.png)
+# ![lewismatos](https://github.com/LewisMatos/Portfolio-Gatsby/blob/master/src/images/siteCapture.PNG)
 
 ## Technologies
 
