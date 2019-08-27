@@ -7,6 +7,8 @@ const Image = styled(BackgroundImage)`
   height: 100vh;
   width: 100%;
   top: 0px;
+  position: sticky !important;
+  position: -webkit-sticky !important;
   &:before{
     content: "";
     position: absolute;
@@ -36,16 +38,21 @@ const GetImage = props => {
         query {
           imageOne: file(relativePath: { eq: "profileimage.jpg" }) {
             childImageSharp {
-              fluid{
+              fluid {
                 ...GatsbyImageSharpFluid
               }
             }
           }
         }
       `}
-      render={data => <Image style={{
-        position: 'sticky'
-      }} id="test" fluid={data.imageOne.childImageSharp.fluid} alt={"headshot image"} />}
+      render={data => (
+        <Image
+          // style={{}}
+          id="Profile__Image"
+          fluid={data.imageOne.childImageSharp.fluid}
+          alt={"headshot image"}
+        />
+      )}
     />
   )
 }
