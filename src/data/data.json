@@ -19,14 +19,14 @@
     },
     "profiles": [
       {
-        "network": "github",
-        "username": "LewisMatos",
-        "url": "https://github.com/LewisMatos"
-      },
-      {
         "network": "linkedin",
         "username": "lewisMatos",
         "url": "https://www.linkedin.com/in/lewismatos/"
+      },
+      {
+        "network": "github",
+        "username": "LewisMatos",
+        "url": "https://github.com/LewisMatos"
       },
       {
         "network": "twitter",

@@ -5,6 +5,7 @@ import media from "styled-media-query"
 import LeftSection from "../components/LeftSection"
 import RightSection from "../components/RightSection"
 import Metatag from "../components/MetaTag"
+import Canvas from "../components/MouseTrail";
 
 const Section = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ export default class index extends Component {
       <>
         <Metatag />
         <Section>
+          <Canvas/>
           <LeftSection />
           <RightSection />
         </Section>

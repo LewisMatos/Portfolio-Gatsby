@@ -3,6 +3,8 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import ProfileImage from "./ProfileImage"
 import media from "styled-media-query"
+import { Label } from "../styles/Label"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from "@fortawesome/fontawesome-svg-core"
 import {
   faGithub,
@@ -10,7 +12,6 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 library.add(faGithub, faLinkedin, faTwitter, faFilePdf)
 
@@ -39,7 +40,11 @@ const Content = styled.div`
     bottom: 0;
     left: 0;
     background: #rgba(117, 19, 93, 0.73);
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));
+    background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    );
     opacity: 0.95;
   }
   ${media.lessThan("medium")`
@@ -64,77 +69,14 @@ const UL = styled.ul`
   justify-content: center;
   padding: 0;
   text-align: center;
-  & > li:last-child {
-    & > a {
-      & > svg {
-        color: #f44f4f;
-      }
-    }
-    animation: flicker 4s linear infinite;
-    @keyframes flicker {
-      0%,
-      13%,
-      15%,
-      18%,
-      20%,
-      40%,
-      86%,
-      100% {
-        opacity: 1;
-      }
-
-      14%,
-      19%,
-      42%,
-      85% {
-        opacity: 0.15;
-      }
-    }
-  }
-  & > svg:last-child {
-    color: red;
-  }
 `
 
-const LabelLI = styled.li`
+const LabelLI = styled(Label)`
   list-style: none;
   align-self: center;
   margin: 0 1rem;
-  &[aria-label]:hover:after {
-    opacity: 1;
-    transition: all 0.1s ease 0.5s;
-    visibility: visible;
-    font-size: 2rem;
-    color: #21bdb7;
-  }
-  &[aria-label]:after {
-    content: attr(aria-label);
-    position: absolute;
-    top: -1.5em;
-    right: 2em;
-    padding: auto;
-    white-space: nowrap;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px #222;
-    background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(0, #f8f8f8),
-      color-stop(1, #cccccc)
-    );
-    background-image: -webkit-linear-gradient(top, #f8f8f8, #cccccc);
-    background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);
-    background-image: -ms-linear-gradient(top, #f8f8f8, #cccccc);
-    background-image: -o-linear-gradient(top, #f8f8f8, #cccccc);
-    z-index: 99999;
-    visibility: hidden;
-  }
-  &[aria-label] {
-    position: relative;
-  }
 `
+
 
 function renderJson(data) {
   const { basics } = data.dataJson
@@ -163,16 +105,17 @@ function renderJson(data) {
       <UL>
         {basics.profiles.map(profile => {
           let fontAwesomeIcons = {
-            github: faGithub,
-            linkedin: faLinkedin,
-            twitter: faTwitter,
-            resume: faFilePdf,
+            linkedin: {icon: faLinkedin, color: '#007BB5'},
+            github: {icon: faGithub,color: '#000' },
+            twitter: {icon: faTwitter, color: '#007EC4'},
+            resume: {icon: faFilePdf, color: '#FF0000'},
           }
           return (
             <LabelLI key={profile.network} aria-label={profile.network}>
               <Anchor href={profile.url} aria-label={profile.network}>
                 <FontAwesomeIcon
-                  icon={fontAwesomeIcons[profile.network]}
+                  icon={fontAwesomeIcons[profile.network].icon}
+                  color={fontAwesomeIcons[profile.network].color}
                   size="2x"
                 />
               </Anchor>

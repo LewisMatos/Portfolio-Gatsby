@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const HeaderGradient = styled.div`
   text-align: left;
+  margin-bottom: 2rem;
   background: linear-gradient(
     270deg,
     #6fba82,

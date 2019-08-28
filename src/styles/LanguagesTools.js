@@ -1,7 +1,7 @@
 import DevIcon from "devicon-react-svg"
 import styled from "styled-components"
+import { Label } from './Label';
 export const StyledIcon = styled(DevIcon)`
-
   fill: ${props => props.color || "black "};
   width: 6rem;
   margin-right: 0.5rem;
@@ -17,10 +17,14 @@ export const ToolTip = styled.div`
   margin: 0 auto;
   text-align: center;
 `
-export  const ToolTips = styled.div`
+export const ToolTips = styled(Label)`
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.5);
+  }
   &[aria-label]:hover:after {
     opacity: 1;
-    transition: all 0.1s ease 0.5s;
+    transition: all 0.1s ease 0.2s;
     visibility: visible;
     font-size: 2rem;
     color: #21bdb7;
@@ -30,7 +34,7 @@ export  const ToolTips = styled.div`
     position: absolute;
     top: -1.5em;
     right: 2em;
-    padding: auto;
+    padding: .2rem;
     white-space: nowrap;
     border-radius: 5px;
     box-shadow: 0px 0px 4px #222;
