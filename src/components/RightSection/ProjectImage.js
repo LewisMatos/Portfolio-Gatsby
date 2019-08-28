@@ -15,9 +15,7 @@ const BoxContainer = styled.div`
 `
 
 const FlipBoxFrontBack = styled.div`
-  background-size: cover;
-  background-position: center;
-  border-radius: 30px;;
+  border-radius: 30px;
   min-height: 475px;
   -ms-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
