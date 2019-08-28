@@ -1,13 +1,14 @@
 import React from "react"
+import uuid from "uuid"
 import {
   StyledIcon,
   ToolTip,
   ToolTips,
   SkillImg,
-} from "../styles/LanguagesTools"
-import styledcomponents from "../images/styledcomponent.png"
-import { HeaderGradient } from "../styles/HeaderGradient"
-import { Header } from "../styles/Header"
+} from "../../styles/LanguagesTools"
+import { HeaderGradient } from "../../styles/HeaderGradient"
+import { Header } from "../../styles/Header"
+import styledcomponentimage from '../../images/styledcomponent.png';
 
 export default function Languages() {
   let skills = [
@@ -35,17 +36,17 @@ export default function Languages() {
         {skills.map(skill => {
           if (skill.name === "styled-component") {
             return (
-              <ToolTips key={skill.name} aria-label={skill.name}>
+              <ToolTips key={uuid.v4()} aria-label={skill.name}>
                 <SkillImg
                   backgroundColor={skill.color}
-                  src={styledcomponents}
+                  src={styledcomponentimage}
                   alt={skill.name}
                 />
               </ToolTips>
             )
           }
           return (
-            <ToolTips key={skill.name} aria-label={skill.name}>
+            <ToolTips key={uuid.v4()} aria-label={skill.name}>
               <StyledIcon color={skill.color} icon={skill.name} />
             </ToolTips>
           )

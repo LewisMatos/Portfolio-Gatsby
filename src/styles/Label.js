@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Label = styled.li`
+export const Label = styled.div`
 transition: all 0.2s ease-in-out;
 &:hover {
   transform: scale(1.5);

@@ -47,7 +47,6 @@ const GetImage = props => {
       `}
       render={data => (
         <Image
-          // style={{}}
           id="Profile__Image"
           fluid={data.imageOne.childImageSharp.fluid}
           alt={"headshot image"}

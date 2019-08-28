@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
-import { HeaderGradient } from "../styles/HeaderGradient"
-import { Header } from '../styles/Header';
+import { HeaderGradient } from "../../styles/HeaderGradient"
+import uuid from 'uuid'
+import { Header } from "../../styles/Header"
 import ProjectImage from "./ProjectImage"
 
 const Section = styled.div`
@@ -16,23 +17,25 @@ const Section = styled.div`
 `
 
 const Container = styled.div`
-  width: 100%;
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 `
 
 function renderJson(data) {
   const { projects } = data.dataJson
   return projects.map(project => {
     return (
-      <a
-        key={project.name}
+      <ProjectImage
+      key={uuid.v4()}
+        file={`${project.name}.png`}
+        alt={project.name}
+        name={project.name}
         href={project.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={project.name}
-      >
-        <ProjectImage file={`${project.name}.png`} alt={project.name} />
-      </a>
+      />
     )
   })
 }
@@ -58,7 +61,9 @@ const Project = props => {
 let Projects = ({ projects }) => {
   return (
     <Section>
-      <HeaderGradient><Header>Projects</Header></HeaderGradient>
+      <HeaderGradient>
+        <Header>Projects</Header>
+      </HeaderGradient>
       <Container>
         <Project />
       </Container>

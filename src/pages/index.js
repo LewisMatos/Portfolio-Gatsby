@@ -2,8 +2,8 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import GlobalStyle from "../styles/GlobalStyle"
 import media from "styled-media-query"
-import LeftSection from "../components/LeftSection"
-import RightSection from "../components/RightSection"
+import LeftSection from "../components/LeftSection/LeftSection"
+import RightSection from "../components/RightSection/RightSection"
 import Metatag from "../components/MetaTag"
 import Canvas from "../components/MouseTrail";
 

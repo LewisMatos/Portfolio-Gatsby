@@ -6,12 +6,13 @@ import Skills from "./Skills.js"
 import Experience from "./Experience.js"
 import Projects from "./Projects.js"
 
-const Section = styled.div`
+const Section = styled.section`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
   flex: 1 0 70%;
+  z-index:20;
 `
 
 const Column = styled.div`
