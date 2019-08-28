@@ -2,27 +2,22 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
+import media from "styled-media-query"
 
 const BoxContainer = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  width: 20vw;
   padding: 35px 15px;
+  margin-bottom: 35px;
+  -webkit-backface-visibility: hidden;
+  ${media.lessThan("large")`
+   width: 100%;
+  `}
 `
 
-const BoxItem = styled.div`
-  position: relative;
-  -webkit-backface-visibility: hidden;
-  width: 30vw;
-  margin-bottom: 35px;
-  max-width: 100%;
-  filter: contrast(75%);
-`
-const FlipBox__FrontBack = styled.div`
+const FlipBoxFrontBack = styled.div`
   background-size: cover;
   background-position: center;
-  border-radius: 8px;
+  border-radius: 30px;;
   min-height: 475px;
   -ms-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -32,7 +27,7 @@ const FlipBox__FrontBack = styled.div`
   box-shadow: 0px 5px 17px 0px grey;
 `
 
-const FlipBox__Front = styled(FlipBox__FrontBack)`
+const FlipBoxFront = styled(FlipBoxFrontBack)`
   -ms-transform: rotateY(0deg);
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
@@ -41,7 +36,7 @@ const FlipBox__Front = styled(FlipBox__FrontBack)`
   transform-style: preserve-3d;
 `
 
-const FlipBox__Back = styled(FlipBox__FrontBack)`
+const FlipBoxBack = styled(FlipBoxFrontBack)`
   position: absolute;
   top: 0;
   left: 0;
@@ -62,7 +57,7 @@ const FlipBox = styled.div`
   perspective: 1000px;
   -webkit-perspective: 1000px;
 
-  :hover ${FlipBox__Front} {
+  :hover ${FlipBoxFront} {
     -ms-transform: rotateY(-180deg);
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
@@ -71,7 +66,7 @@ const FlipBox = styled.div`
     transform-style: preserve-3d;
   }
 
-  :hover ${FlipBox__Back} {
+  :hover ${FlipBoxBack} {
     -ms-transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
@@ -99,12 +94,10 @@ const Inner = styled.div`
   z-index: 2;
 
   transform: translateY(-50%) translateZ(60px) scale(0.94);
-  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
-  -ms-transform: translateY(-50%) translateZ(60px) scale(0.94);
   top: 50%;
 `
 
-const FlipBox__Button = styled.button`
+const FlipBoxButton = styled.button`
     background-color: transparent;
     border: 2px solid #fff;
     border-radius: 2px;
@@ -122,38 +115,22 @@ const Anchor = styled.a`
 `
 
 const Project = styled(BackgroundImage)`
-  margin: 0 0.2rem 2rem 0;
-  width: 100%;
-  height: 50vh;
-  background-size: cover;
-  background-position: center center;
-  background-position: center;
-  background-size: cover;
-  filter: contrast(75%);
-  border-radius: 7px;
-  margin-top: 5px;
-  transition-property: box-shadow margin-top filter;
-  transition-duration: 0.1s;
-  box-shadow: 0px 5px 17px 0px grey;
-  /* &:hover {
-    cursor: pointer;
-    filter: contrast(100%);
-    margin-top: 0px;
-    opacity: 0.7;
-  } */
+  filter: contrast(55%);
+  &::after,::before{
+  border-radius: 30px;
+  }
 `
 const renderImage = (value, file) => {
   const { node } = value
   const { childImageSharp } = node
   return (
     <BoxContainer >
-      <BoxItem>
         <FlipBox>
-          <FlipBox__Front>
-            <BackgroundImage
+          <FlipBoxFront>
+            <Project
               style={{ position: "absolute", width: "100%", height: "100%" }}
               fluid={childImageSharp.fluid}
-            >
+            />
               <Inner>
                 <img
                   src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png"
@@ -161,9 +138,8 @@ const renderImage = (value, file) => {
                   className="flip-box-img"
                 />
               </Inner>
-            </BackgroundImage>
-          </FlipBox__Front>
-          <FlipBox__Back>
+          </FlipBoxFront>
+          <FlipBoxBack>
             <Inner>
               <Anchor
                 href={file.href}
@@ -171,7 +147,7 @@ const renderImage = (value, file) => {
                 rel="noopener noreferrer"
                 aria-label={file.name}
               >
-                <FlipBox__Button className="flip-box-button">Website</FlipBox__Button>{" "}
+                <FlipBoxButton className="flip-box-button">Website</FlipBoxButton>{" "}
               </Anchor>
               <Anchor
                 href={file.href}
@@ -179,12 +155,11 @@ const renderImage = (value, file) => {
                 rel="noopener noreferrer"
                 aria-label={file.name}
               >
-                <FlipBox__Button className="flip-box-button">GitHub</FlipBox__Button>{" "}
+                <FlipBoxButton className="flip-box-button">GitHub</FlipBoxButton>{" "}
               </Anchor>
             </Inner>
-          </FlipBox__Back>
+          </FlipBoxBack>
         </FlipBox>
-      </BoxItem>
     </BoxContainer>
   )
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import portfolio_1200x628 from "../../public/static/c65edfcd9b49f02e6398047a50f06286/3fa08/portfolio_1200x628.png"
+import portfolio_1200x628 from '../images/portfolio_1200x628.png';
 
 let Metatag = () => {
   return (

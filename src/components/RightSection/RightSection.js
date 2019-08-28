@@ -4,7 +4,7 @@ import media from "styled-media-query"
 import Education from "./Education.js"
 import Skills from "./Skills.js"
 import Experience from "./Experience.js"
-import Projects from "./Projects.js/index.js"
+import Projects from "./Projects.js"
 
 const Section = styled.section`
   display: flex;
