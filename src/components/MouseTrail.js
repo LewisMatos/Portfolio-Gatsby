@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 const CanvasAbs = styled.canvas`
     position: fixed;
+    z-index: 10;
 `
 
 class Point {

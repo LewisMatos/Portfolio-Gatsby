@@ -12,6 +12,7 @@ const Section = styled.div`
   flex-wrap: wrap;
   text-align: center;
   flex: 1 0 70%;
+  z-index:20;
 `
 
 const Column = styled.div`

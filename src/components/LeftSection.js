@@ -32,6 +32,7 @@ const Content = styled.div`
   font-size: 2rem;
   height: 100vh;
   width: 30%;
+  z-index:20;
   &:before {
     content: "";
     position: absolute;
