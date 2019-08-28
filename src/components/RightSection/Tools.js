@@ -4,9 +4,10 @@ import {
   ToolTip,
   ToolTips,
   SkillImg,
-} from "../styles/LanguagesTools"
-import { HeaderGradient } from "../styles/HeaderGradient"
-import { Header } from "../styles/Header"
+} from "../../styles/LanguagesTools"
+import uuid from "uuid"
+import { HeaderGradient } from "../../styles/HeaderGradient"
+import { Header } from "../../styles/Header"
 
 export default function Tools() {
   let tools = [
@@ -28,7 +29,7 @@ export default function Tools() {
         {tools.map(tool => {
           if (tool.name === "amazonwebservices") {
             return (
-              <ToolTips key={tool.name} aria-label={tool.name}>
+              <ToolTips key={uuid.v4()} aria-label={tool.name}>
                 <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2018-04-10&ci=AWS00382630">
                   <SkillImg
                     width="24rem"
@@ -41,7 +42,7 @@ export default function Tools() {
             )
           }
           return (
-            <ToolTips key={tool.name} aria-label={tool.name}>
+            <ToolTips key={uuid.v4()} aria-label={tool.name}>
               <StyledIcon color={tool.color} icon={tool.name} />
             </ToolTips>
           )

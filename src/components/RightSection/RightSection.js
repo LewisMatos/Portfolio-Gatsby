@@ -4,9 +4,9 @@ import media from "styled-media-query"
 import Education from "./Education.js"
 import Skills from "./Skills.js"
 import Experience from "./Experience.js"
-import Projects from "./Projects.js"
+import Projects from "./Projects.js/index.js"
 
-const Section = styled.div`
+const Section = styled.section`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

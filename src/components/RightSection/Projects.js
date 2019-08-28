@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
-import { HeaderGradient } from "../styles/HeaderGradient"
-import { Header } from "../styles/Header"
+import { HeaderGradient } from "../../styles/HeaderGradient"
+import uuid from 'uuid'
+import { Header } from "../../styles/Header"
 import ProjectImage from "./ProjectImage"
 
 const Section = styled.div`
@@ -29,6 +30,7 @@ function renderJson(data) {
   return projects.map(project => {
     return (
       <ProjectImage
+      key={uuid.v4()}
         file={`${project.name}.png`}
         alt={project.name}
         name={project.name}

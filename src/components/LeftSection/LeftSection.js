@@ -3,7 +3,8 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import ProfileImage from "./ProfileImage"
 import media from "styled-media-query"
-import { Label } from "../styles/Label"
+import uuid from "uuid"
+import { Label } from "../../styles/Label"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from "@fortawesome/fontawesome-svg-core"
 import {
@@ -15,7 +16,7 @@ import { faFilePdf } from "@fortawesome/free-solid-svg-icons"
 
 library.add(faGithub, faLinkedin, faTwitter, faFilePdf)
 
-const Section = styled.div`
+const Section = styled.section`
   display: flex;
   justify-content: center;
   flex: 1 0 30%;
@@ -64,7 +65,7 @@ const Anchor = styled.a`
     color: rgb(233, 80, 101);
   }
 `
-const UL = styled.ul`
+const UL = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +113,7 @@ function renderJson(data) {
             resume: {icon: faFilePdf, color: '#FF0000'},
           }
           return (
-            <LabelLI key={profile.network} aria-label={profile.network}>
+            <LabelLI key={uuid.v4()} aria-label={profile.network}>
               <Anchor href={profile.url} aria-label={profile.network}>
                 <FontAwesomeIcon
                   icon={fontAwesomeIcons[profile.network].icon}

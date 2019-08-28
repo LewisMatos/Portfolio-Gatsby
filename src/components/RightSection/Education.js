@@ -2,10 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import media from "styled-media-query"
 import { StaticQuery, graphql } from "gatsby"
-import { HeaderGradient } from "../styles/HeaderGradient"
-import { Header } from "../styles/Header"
+import uuid from "uuid"
+import { HeaderGradient } from "../../styles/HeaderGradient"
+import { Header } from "../../styles/Header"
 
-const Section = styled.div`
+const Article = styled.article`
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -41,7 +42,7 @@ function renderJson(data) {
   const { education } = data.dataJson
   return education.map(edu => {
     return (
-      <Edu key={edu.institution}>
+      <Edu key={uuid.v4()}>
         <Row>
           <span>{edu.institution}</span>
           <span>{`${edu.startDate} - ${edu.endDate}`}</span>
@@ -76,12 +77,12 @@ const Content = props => {
 
 let Education = () => {
   return (
-    <Section>
+    <Article>
       <HeaderGradient>
         <Header> Education</Header>
       </HeaderGradient>
       <Content />
-    </Section>
+    </Article>
   )
 }
 

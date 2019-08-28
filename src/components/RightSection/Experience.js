@@ -1,12 +1,12 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import uuid from "uuid"
+import { HeaderGradient } from "../../styles/HeaderGradient"
+import { Header } from "../../styles/Header"
 
-import { HeaderGradient } from "../styles/HeaderGradient"
-import { Header } from "../styles/Header"
 
-
-const Section = styled.div`
+const Article = styled.article`
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -33,7 +33,7 @@ function renderJson(data) {
   const { work } = data.dataJson
   return work.map(work => {
     return (
-      <div key={work.company}>
+      <div key={uuid.v4()}>
         <Company>
           <span>{work.company}</span>
           <span>{`${work.startDate} - ${work.endDate}`}</span>
@@ -88,13 +88,13 @@ const Work = props => {
 
 let Experience = () => {
   return (
-    <Section>
+    <Article>
       <HeaderGradient>
         <Header>Experience</Header>
       </HeaderGradient>
 
       <Work />
-    </Section>
+    </Article>
   )
 }
 
