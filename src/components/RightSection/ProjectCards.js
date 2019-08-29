@@ -17,7 +17,7 @@ const BoxContainer = styled.div`
 
 const FlipBoxFrontBack = styled.div`
   border-radius: 30px;
-  min-height: 475px;
+  min-height: 40vh;
   -ms-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   -webkit-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -166,7 +166,7 @@ const renderImage = (value, props) => {
   )
 }
 
-const ProjectImage = props => {
+const ProjectCards = props => {
   const { file } = props
   return (
     <StaticQuery
@@ -199,4 +199,4 @@ const ProjectImage = props => {
   )
 }
 
-export default ProjectImage
+export default ProjectCards

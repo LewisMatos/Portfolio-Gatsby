@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { HeaderGradient } from "../../styles/HeaderGradient"
 import uuid from 'uuid'
 import { Header } from "../../styles/Header"
-import ProjectImage from "./ProjectImage"
+import ProjectCards from "./ProjectCards"
 
 const Section = styled.div`
   display: flex;
@@ -29,7 +29,7 @@ function renderJson(data) {
   const { projects } = data.dataJson
   return projects.map(project => {
     return (
-      <ProjectImage
+      <ProjectCards
       key={uuid.v4()}
         file={`${project.name}.png`}
         alt={project.name}
