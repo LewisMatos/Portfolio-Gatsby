@@ -47,6 +47,9 @@
 * Gatsbyjs
 * Styled-components
 
+# Featured  Code
+## Mouse Trail [https://noahyamamoto.com/](https://noahyamamoto.com/blog/mousetrailanimation)
+
 ## Install
 
 ```sh
