@@ -3,20 +3,21 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 import media from "styled-media-query"
+import ctaarrow from '../../images/ctaarrow.png';
 
 const BoxContainer = styled.div`
   width: 20vw;
   padding: 35px 15px;
   margin-bottom: 35px;
   -webkit-backface-visibility: hidden;
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
    width: 100%;
   `}
 `
 
 const FlipBoxFrontBack = styled.div`
   border-radius: 30px;
-  min-height: 475px;
+  min-height: 40vh;
   -ms-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   -webkit-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -93,6 +94,9 @@ const Inner = styled.div`
 
   transform: translateY(-50%) translateZ(60px) scale(0.94);
   top: 50%;
+  ${media.lessThan("large")`
+    flex-direction:column;
+  `}
 `
 
 const FlipBoxButton = styled.button`
@@ -118,7 +122,7 @@ const Project = styled(BackgroundImage)`
   border-radius: 30px;
   }
 `
-const renderImage = (value, file) => {
+const renderImage = (value, props) => {
   const { node } = value
   const { childImageSharp } = node
   return (
@@ -131,7 +135,7 @@ const renderImage = (value, file) => {
             />
               <Inner>
                 <img
-                  src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png"
+                  src={ctaarrow}
                   alt="cta arrow"
                   className="flip-box-img"
                 />
@@ -140,18 +144,18 @@ const renderImage = (value, file) => {
           <FlipBoxBack>
             <Inner>
               <Anchor
-                href={file.href}
+                href={props.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={file.name}
+                aria-label={props.name}
               >
                 <FlipBoxButton className="flip-box-button">Website</FlipBoxButton>{" "}
               </Anchor>
               <Anchor
-                href={file.href}
+                href={props.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={file.name}
+                aria-label={props.name}
               >
                 <FlipBoxButton className="flip-box-button">GitHub</FlipBoxButton>{" "}
               </Anchor>
@@ -162,7 +166,7 @@ const renderImage = (value, file) => {
   )
 }
 
-const ProjectImage = props => {
+const ProjectCards = props => {
   const { file } = props
   return (
     <StaticQuery
@@ -188,11 +192,11 @@ const ProjectImage = props => {
       render={({ images }) =>
         renderImage(
           images.edges.find(image => image.node.relativePath === file),
-          file
+          props
         )
       }
     />
   )
 }
 
-export default ProjectImage
+export default ProjectCards

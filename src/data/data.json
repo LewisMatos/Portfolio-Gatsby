@@ -225,14 +225,16 @@
     }
   ],
   "projects": [
-    { "name": "911autodr", "href": "https://911autodr.com/" },
-    { "name": "vidup", "href": "https://vidup.lewismatos.com/login" },
-    { "name": "iartist", "href": "https://iartist.lewismatos.com/" },
+    { "name": "911autodr", "href": "https://911autodr.com/", "github":"https://911autodr.com/" },
+    {"name":"portfoliosite", "href": "https://lewismatos.com", "github":"https://github.com/LewisMatos/Portfolio-Gatsby"},
+    { "name": "vidup", "href": "https://vidup.lewismatos.com/login", "github":"https://github.com/LewisMatos/videouploader" },
+    { "name": "iartist", "href": "https://iartist.lewismatos.com/", "github":"https://github.com/LewisMatos/itunes-search" },
     {
       "name": "minimaxtictactoe",
-      "href": "http://lewismatos.github.io/MiniMaxTicTacToe/"
+      "href": "http://lewismatos.github.io/MiniMaxTicTacToe/",
+      "github": "https://github.com/LewisMatos/MiniMaxTicTacToe"
     },
-    { "name": "birdgame", "href": "https://lewismatos.github.io/birdGame/" }
+    { "name": "birdgame", "href": "https://lewismatos.github.io/birdGame/", "github": "https://github.com/LewisMatos/birdGame" }
   ],
   "skills": [
     {
