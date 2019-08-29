@@ -35,6 +35,7 @@ function renderJson(data) {
         alt={project.name}
         name={project.name}
         href={project.href}
+        github={project.github}
       />
     )
   })
@@ -49,6 +50,7 @@ const Project = props => {
             projects {
               name
               href
+              github
             }
           }
         }
