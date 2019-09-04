@@ -8,7 +8,7 @@
     "backgroundvideo": "https://storage.googleapis.com/coverr-main/mp4/Black_Keys.mp4",
     "email": "lewm20@gmail.com",
     "phone": "(347) 885-4683",
-    "website": "http://johndoe.com",
+    "website": "https://lewismatos.com",
     "summary": "A summary of John Doe...",
     "location": {
       "address": "Brooklyn",
@@ -36,7 +36,7 @@
       {
         "network": "resume",
         "username": "",
-        "url": "https://s3.amazonaws.com/lewismatos.com/resume/LewisMatosResume.pdf"
+        "url": "https://lewismatosresume.s3.amazonaws.com/Lewis_Matos_Resume.pdf"
       }
     ]
   },
