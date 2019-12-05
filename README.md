@@ -27,10 +27,10 @@
 
 > Lewis Matos Portfolio site using GatsbyJS
 
-### 🏠 [Website](https://lewismatos.com)
+# 🏠 [Website](https://lewismatos.com)
 
 
-# ![lewismatos](https://github.com/LewisMatos/Portfolio-Gatsby/blob/master/src/images/siteCapture.PNG)
+# ![lewismatos](https://github.com/LewisMatos/Portfolio-Gatsby/blob/master/src/images/siteCapture.png)
 
 ## Technologies
 
