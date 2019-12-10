@@ -8,16 +8,18 @@ import {
 } from "../../styles/LanguagesTools"
 import { HeaderGradient } from "../../styles/HeaderGradient"
 import { Header } from "../../styles/Header"
-import styledcomponentimage from '../../images/styledcomponent.png';
+import styledcomponentimage from "../../images/styledcomponent.png"
+import reduximage from "../../images/reduximage.png"
 
 export default function Languages() {
   let skills = [
+    { name: "javascript", color: "#F0DB4F" },
+    { name: "react", color: "#61DAFB" },
+    { name: "redux", color: "#fff" },
     { name: "html5", color: "#E44D26" },
     { name: "css3", color: "#1572B6" },
     { name: "bootstrap", color: "#5B4282" },
-    { name: "react", color: "#61DAFB" },
     { name: "jquery", color: "#0868AC" },
-    { name: "javascript", color: "#F0DB4F" },
     { name: "nodejs", color: "#83CD29" },
     { name: "mysql", color: "#00618A" },
     { name: "php", color: "#6181B6" },
@@ -27,6 +29,7 @@ export default function Languages() {
     { name: "sass", color: "#B17B94" },
     { name: "styled-component", color: "#DA8876" },
   ]
+
   return (
     <>
       <HeaderGradient>
@@ -44,7 +47,18 @@ export default function Languages() {
                 />
               </ToolTips>
             )
+          }else if (skill.name === "redux") {
+            return (
+              <ToolTips key={uuid.v4()} aria-label={skill.name}>
+                <SkillImg
+                  backgroundColor={skill.color}
+                  src={reduximage}
+                  alt={skill.name}
+                />
+              </ToolTips>
+            )
           }
+
           return (
             <ToolTips key={uuid.v4()} aria-label={skill.name}>
               <StyledIcon color={skill.color} icon={skill.name} />

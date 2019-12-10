@@ -44,11 +44,11 @@ function renderJson(data) {
             return (
               <Description key={index}>
                 {summary.header}
-                <ul>
+                {/* <ul>
                   {summary.bullet.map((bullet, index) => {
                     return <Description key={index}>{bullet}</Description>
                   })}
-                </ul>
+                </ul> */}
               </Description>
             )
           })}

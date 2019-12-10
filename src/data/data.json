@@ -88,40 +88,28 @@
       "summary": [
         {
           "header": "Performed client-side integrations with Bounce Exchange behavior automation platform using Vanilla JavaScript and jQuery.",
-          "bullet": []
+          "bullet": [""]
         },
         {
           "header": "Collaborated with design and accounts to deliver custom campaigns across many high traffic e-commerce and publisher sites.",
-          "bullet": []
+          "bullet": [""]
         },
         {
-          "header": "Integrated numerous Web Services and APIs with a primary focus on Email Service Providers using PHP CodeIgniter and JavaScript.",
-          "bullet": [
-            "Developed in-house APIs for SendGrid, Mailchimp, Bronto, Salesforce, Experian, Uniqlo, JetBlue and many more."
-          ]
-        },
-        {
-          "header": "Assisted in rolling out client-side side V2 inbox retargeting engine.",
-          "bullet": [
-            "Built JavaScript tracking boiler-plates leading to a decrease in complexity, client roll-out and bugs."
-          ]
-        },
-        {
-          "header": "Worked alongside accounts and analytics to create experimental campaigns and platform features.",
-          "bullet": []
+          "header": "Integrated numerous Web Services and APIs to our platform with a primary focus on Email Service Providers using PHP CodeIgniter and JavaScript.",
+          "bullet": [""]
         },
         {
           "header": "Managed Bouncex homepage, working closely with design lead on site changes.",
-          "bullet": ["Implemented Facebook and google conversion tracking."]
+          "bullet": [""]
         },
         {
           "header": "Paired programmed and helped onboard new engineers with the platform and codebase.",
-          "bullet": []
+          "bullet": [""]
         }
       ]
     },
     {
-      "company": "Department of Education",
+      "company": "NYC Department of Education",
       "position": "DIIT IPDVS Engineer Intern",
       "website": "http://doe.com",
       "startDate": "Mar 2015",
@@ -138,8 +126,8 @@
       ]
     },
     {
-      "company": "DOE Peak Technician Intern",
-      "position": "Department of Education",
+      "company": "NYC Department of Education",
+      "position": "DOE Peak Technician Intern",
       "website": "http://doe.com",
       "startDate": "Aug 2014",
       "endDate": "Sept 2014",
@@ -225,16 +213,36 @@
     }
   ],
   "projects": [
-    { "name": "911autodr", "href": "https://911autodr.com/", "github":"https://911autodr.com/" },
-    {"name":"portfoliosite", "href": "https://lewismatos.com", "github":"https://github.com/LewisMatos/Portfolio-Gatsby"},
-    { "name": "vidup", "href": "https://vidup.lewismatos.com/login", "github":"https://github.com/LewisMatos/videouploader" },
-    { "name": "iartist", "href": "https://iartist.lewismatos.com/", "github":"https://github.com/LewisMatos/itunes-search" },
+    {
+      "name": "911autodr",
+      "href": "https://911autodr.com/",
+      "github": "https://911autodr.com/"
+    },
+    {
+      "name": "portfoliosite",
+      "href": "https://lewismatos.com",
+      "github": "https://github.com/LewisMatos/Portfolio-Gatsby"
+    },
+    {
+      "name": "vidup",
+      "href": "https://vidup.lewismatos.com/login",
+      "github": "https://github.com/LewisMatos/videouploader"
+    },
+    {
+      "name": "iartist",
+      "href": "https://iartist.lewismatos.com/",
+      "github": "https://github.com/LewisMatos/itunes-search"
+    },
     {
       "name": "minimaxtictactoe",
       "href": "http://lewismatos.github.io/MiniMaxTicTacToe/",
       "github": "https://github.com/LewisMatos/MiniMaxTicTacToe"
     },
-    { "name": "birdgame", "href": "https://lewismatos.github.io/birdGame/", "github": "https://github.com/LewisMatos/birdGame" }
+    {
+      "name": "birdgame",
+      "href": "https://lewismatos.github.io/birdGame/",
+      "github": "https://github.com/LewisMatos/birdGame"
+    }
   ],
   "skills": [
     {
