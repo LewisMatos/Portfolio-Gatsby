@@ -219,6 +219,21 @@
       "github": "https://911autodr.com/"
     },
     {
+      "name": "reactmoviedb",
+      "href": "https://reactmoviedb.lewismatos.com/",
+      "github": "https://github.com/LewisMatos/reactmoviedb"
+    },
+    {
+      "name": "gatsbychat",
+      "href": "https://d2wctpcwhddf2k.cloudfront.net/",
+      "github": "https://github.com/LewisMatos/gatsbychat"
+    },
+    {
+      "name": "steelmillbar",
+      "href": "https://steelmillbar.com/",
+      "github": "https://steelmillbar.com//"
+    },
+    {
       "name": "portfoliosite",
       "href": "https://lewismatos.com",
       "github": "https://github.com/LewisMatos/Portfolio-Gatsby"

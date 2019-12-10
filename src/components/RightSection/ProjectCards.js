@@ -141,6 +141,7 @@ const renderImage = (value, props) => {
                 />
               </Inner>
           </FlipBoxFront>
+          <div>{props.name}</div>
           <FlipBoxBack>
             <Inner>
               <Anchor
