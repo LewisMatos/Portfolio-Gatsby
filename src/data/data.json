@@ -42,11 +42,21 @@
   },
   "work": [
     {
+      "company": "Oscar Health",
+      "position": "Software Engineer Apprentice",
+      "website": "https://www.hioscar.com/",
+      "startDate": "Feb 2020",
+      "endDate": "Present",
+      "summary": [
+
+      ]
+    },
+    {
       "company": "Freelance Software Engineer",
       "position": "Software Engineer",
       "website": "http://scripted.com",
       "startDate": "Mar 2017",
-      "endDate": "Present",
+      "endDate": "Dec 2019",
       "summary": [
         {
           "header": "Working on a range of freelance web projects using Amazon web services, Mailchimp and Wordpress.",
@@ -71,7 +81,7 @@
       "position": "Teacher at Lyons Community School",
       "website": "http://scripted.com",
       "startDate": "Mar 2017",
-      "endDate": "Present",
+      "endDate": "Dec 2018",
       "summary": [
         {
           "header": "Teach fundamentals of HTML, CSS and JavaScript to high school students in under resourced schools.",
@@ -141,23 +151,6 @@
           "bullet": []
         }
       ]
-    },
-    {
-      "company": "Staples",
-      "position": "Easy Tech Technician",
-      "website": "http://staples.com",
-      "startDate": "Oct 2009",
-      "endDate": "Nov 2012",
-      "summary": [
-        {
-          "header": "Performed system diagnostics, repairs and upgrades on client technologies.",
-          "bullet": []
-        },
-        {
-          "header": "Answered tech questions about various technologies, with consistent high sales",
-          "bullet": []
-        }
-      ]
     }
   ],
   "FreeLance": [
@@ -177,8 +170,8 @@
       "organization": "Organization",
       "position": "Volunteer",
       "website": "http://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
+      "startDate": "",
+      "endDate": "",
       "summary": "Description...",
       "highlights": ["Awarded 'Volunteer of the Month'"]
     }
@@ -188,8 +181,8 @@
       "institution": "Flatiron School",
       "area": "NYC Web Development Fellow",
       "studyType": "Web Development",
-      "startDate": "July 2015",
-      "endDate": "Dec 2015",
+      "startDate": "",
+      "endDate": "",
       "gpa": "0",
       "courses": ["DB1101 - Basic SQL"]
     },
@@ -197,8 +190,8 @@
       "institution": "Queens College, The City University of New York",
       "area": "Bachelor of Science, Computer Science",
       "studyType": "Computer Science",
-      "startDate": "Jan 2013",
-      "endDate": "Dec 2018",
+      "startDate": "",
+      "endDate": "",
       "gpa": "0",
       "courses": ["DB1101 - Basic SQL"]
     },
@@ -206,8 +199,8 @@
       "institution": "New York City College of Technology",
       "area": "Associates in Applied Science",
       "studyType": "",
-      "startDate": "Jan 2009",
-      "endDate": "July 2011",
+      "startDate": "",
+      "endDate": "",
       "gpa": "0",
       "courses": ["DB1101 - Basic SQL"]
     }

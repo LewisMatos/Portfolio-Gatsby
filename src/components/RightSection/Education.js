@@ -27,7 +27,7 @@ const Row = styled.div`
     line-height: 2.2em;
     font-weight: 500;
     &:last-child {
-      font-size: 0.9em;
+      font-size: 1.3em;
     }
   }
 `
@@ -45,7 +45,7 @@ function renderJson(data) {
       <Edu key={uuid.v4()}>
         <Row>
           <span>{edu.institution}</span>
-          <span>{`${edu.startDate} - ${edu.endDate}`}</span>
+          {/* <span>{`${edu.startDate} - ${edu.endDate}`}</span> */}
         </Row>
         <div>{edu.area}</div>
       </Edu>
