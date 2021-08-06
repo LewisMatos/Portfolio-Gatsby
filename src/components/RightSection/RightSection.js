@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import media from "styled-media-query"
 import Education from "./Education.js"
@@ -34,47 +34,13 @@ const Row = styled.div`
   transition-property: all;
   transition-duration: 0.9s;
   transition-timing-function: cubic-bezier(0, 0.2, 0.5, 1);
-  max-height: ${props => (props.hide ? 0 : "100%")};
-`
-const Button = styled.button`
-  position: absolute;
-  width:2rem;
-  height:2rem;
-  margin:0 auto
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  text-decoration: none;
-  & {
-    @include transition(all, 0.5s, cubic-bezier(0.65,-0.25,0.25,1.95));
-    font-weight: 900;
-    color: white;
-    background: black;
-    text-transform: uppercase;
-    &:hover, &:focus, &:active {
-      letter-spacing: 0.125rem;
-    }
-  }
-  ${media.lessThan("medium")`
-    display:none;
-  `}
+  max-height: "100%";
 `
 
 let RightSection = props => {
-  const [hidden, setHidden] = useState(0)
-  const onClick = event => {
-    let temp
-    if (hidden) {
-      temp = 0
-    } else {
-      temp = 1
-    }
-    setHidden(temp)
-  }
   return (
     <Section>
-      <Button onClick={onClick}> {hidden ? "+" : "-"} </Button>
-      <Row hide={hidden}>
+      <Row>
         <Experience />
         <Column>
           <Education />
