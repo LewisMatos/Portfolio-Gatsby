@@ -78,7 +78,7 @@
     },
     {
       "company": "Scripted",
-      "position": "Volunteer Teacher",
+      "position": "Teacher at Lyons Community School",
       "website": "http://scripted.com",
       "startDate": "Mar 2017",
       "endDate": "Dec 2018",
@@ -105,11 +105,15 @@
           "bullet": [""]
         },
         {
+          "header": "Integrated numerous Web Services and APIs to our platform with a primary focus on Email Service Providers using PHP CodeIgniter and JavaScript.",
+          "bullet": [""]
+        },
+        {
           "header": "Managed Bouncex homepage, working closely with design lead on site changes.",
           "bullet": [""]
         },
         {
-          "header": "Paired programmed and helped onboard new engineers with the platform",
+          "header": "Paired programmed and helped onboard new engineers with the platform and codebase.",
           "bullet": [""]
         }
       ]
