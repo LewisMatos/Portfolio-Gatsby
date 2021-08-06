@@ -1,0 +1,22 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-portfoliogatsby-dev-165842-authRole",
+            "UnauthRoleArn": "arn:aws:iam::508550448516:role/amplify-portfoliogatsby-dev-165842-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::508550448516:role/amplify-portfoliogatsby-dev-165842-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-portfoliogatsby-dev-165842-deployment",
+            "UnauthRoleName": "amplify-portfoliogatsby-dev-165842-unauthRole",
+            "StackName": "amplify-portfoliogatsby-dev-165842",
+            "StackId": "arn:aws:cloudformation:us-east-1:508550448516:stack/amplify-portfoliogatsby-dev-165842/15cabd70-f6f9-11eb-9d34-0eb5b83f8639",
+            "AmplifyAppId": "d33743s97a34h4"
+        }
+    },
+    "hosting": {
+        "amplifyhosting": {
+            "service": "amplifyhosting",
+            "type": "cicd",
+            "lastPushTimeStamp": "2021-08-06T21:03:45.180Z"
+        }
+    }
+}
