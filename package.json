@@ -22,7 +22,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "bootstrap": "^4.3.1",
     "devicon-react-svg": "^0.1.7",
-    "gatsby": "^2.19.28",
+    "gatsby": "^2.32.13",
     "gatsby-background-image": "^0.8.5",
     "gatsby-image": "^2.2.42",
     "gatsby-plugin-gtag": "^1.0.13",
@@ -44,7 +44,8 @@
     "serialize-javascript": "^2.1.2",
     "styled-components": "^4.3.2",
     "styled-media-query": "^2.1.2",
-    "uuid": "^3.4.0"
+    "uuid": "^3.4.0",
+    "yarn": "^1.22.11"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
